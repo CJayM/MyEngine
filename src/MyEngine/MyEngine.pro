@@ -21,4 +21,5 @@ LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
 SOURCES += \        
         main.cpp
 
-HEADERS +=
+HEADERS += \
+    shaders_src.h
