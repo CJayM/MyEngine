@@ -3,8 +3,6 @@
 #include <cassert>
 #include <stdio.h>
 
-
-
 static App* GLOBAL_APP = nullptr;
 
 void error_callback(int error, const char* description)
@@ -30,11 +28,6 @@ void resize_callback(GLFWwindow* window, int width, int height)
 
     GLOBAL_APP->onResize(width, height);
 }
-
-struct Vertex {
-    float x, y;
-    float r, g, b;
-};
 
 App::App()
 {
@@ -79,28 +72,8 @@ void App::run()
     assert(isInitialized_);
     assert(window_);
 
-    Vertex vertices[3] = {
-        { -0.6f, -0.4f, 1.f, 0.f, 0.f },
-        { 0.6f, -0.4f, 0.f, 1.f, 0.f },
-        { 0.f, 0.6f, 0.f, 0.f, 1.f }
-    };
-
-    GLuint vertex_buffer;
-    glGenBuffers(1, &vertex_buffer);
-    glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-
-    GLint mvp_location = glGetUniformLocation(shaderProgram_, "MVP");
-    GLint vpos_location = glGetAttribLocation(shaderProgram_, "vPos");
-    GLint vcol_location = glGetAttribLocation(shaderProgram_, "vCol");
-
-    glEnableVertexAttribArray(vpos_location);
-    glVertexAttribPointer(vpos_location, 2, GL_FLOAT, GL_FALSE,
-        sizeof(vertices[0]), (void*)0);
-    glEnableVertexAttribArray(vcol_location);
-    glVertexAttribPointer(vcol_location, 3, GL_FLOAT, GL_FALSE,
-        sizeof(vertices[0]), (void*)(sizeof(float) * 2));
+    triangle = new Model();
+    shader = new SimpleShader();
 
     float ratio;
     int width, height;
@@ -126,9 +99,9 @@ void App::run()
         mat4x4_ortho(p, -ratio, ratio, -1.f, 1.f, 1.f, -1.f);
         mat4x4_mul(mvp, p, m);
 
-        glUseProgram(shaderProgram_);
-        glUniformMatrix4fv(mvp_location, 1, GL_FALSE, (const GLfloat*)mvp);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glUseProgram(shader->program);
+        shader->setMatrix(mvp);
+        triangle->draw();
 
         glfwSwapBuffers(window_);
 
@@ -139,22 +112,6 @@ void App::run()
 
     glfwTerminate();
     exit(EXIT_SUCCESS);
-}
-
-void App::setShaders(const char* vertexShader, const char* fragmentShader)
-{
-    GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertex_shader, 1, &vertexShader, NULL);
-    glCompileShader(vertex_shader);
-
-    GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragment_shader, 1, &fragmentShader, NULL);
-    glCompileShader(fragment_shader);
-
-    shaderProgram_ = glCreateProgram();
-    glAttachShader(shaderProgram_, vertex_shader);
-    glAttachShader(shaderProgram_, fragment_shader);
-    glLinkProgram(shaderProgram_);
 }
 
 void App::onKey(int key, int scancode, int action, int mods)

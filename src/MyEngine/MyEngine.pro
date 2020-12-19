@@ -9,7 +9,10 @@ CONFIG -= qt
 
 INCLUDEPATH += ../../libs/glad/include
 SOURCES += ../../libs/glad/src/gl.c \
-    app.cpp
+    app.cpp \
+    geom.cpp \
+    model.cpp \
+    simple_shader.cpp
 
 INCLUDEPATH += ../../libs/glfw/include
 LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
@@ -24,4 +27,7 @@ SOURCES += \
 
 HEADERS += \
     app.h \
-    shaders_src.h
+    geom.h \
+    model.h \
+    shaders_src.h \
+    simple_shader.h
