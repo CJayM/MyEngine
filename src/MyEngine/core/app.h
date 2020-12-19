@@ -1,5 +1,5 @@
-#ifndef APP_H
-#define APP_H
+#ifndef CORE_APP_H
+#define CORE_APP_H
 
 #include "model.h"
 #include "simple_shader.h"
@@ -9,8 +9,9 @@
 #include <GLFW/glfw3.h>
 #include <glad/linmath.h>
 
-class App
-{
+namespace core {
+
+class App {
 public:
     App();
     ~App();
@@ -29,5 +30,5 @@ private:
     Model* triangle = nullptr;
     SimpleShader* shader = nullptr;
 };
-
-#endif // APP_H
+}
+#endif // CORE_APP_H

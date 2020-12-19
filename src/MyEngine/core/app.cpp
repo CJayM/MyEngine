@@ -3,6 +3,8 @@
 #include <cassert>
 #include <stdio.h>
 
+namespace core {
+
 static App* GLOBAL_APP = nullptr;
 
 void error_callback(int error, const char* description)
@@ -128,4 +130,5 @@ void App::onResize(int width, int height)
 void App::onError(int error, const char* description)
 {
     fprintf(stderr, "Error: %s\n", description);
+}
 }

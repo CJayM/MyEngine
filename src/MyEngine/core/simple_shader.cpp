@@ -3,6 +3,8 @@
 #include "geom.h"
 #include "shaders_src.h"
 
+namespace core {
+
 SimpleShader::SimpleShader()
 {
     GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
@@ -34,4 +36,5 @@ SimpleShader::SimpleShader()
 void SimpleShader::setMatrix(const mat4x4& matrix)
 {
     glUniformMatrix4fv(cameraMatrix, 1, GL_FALSE, (const GLfloat*)matrix);
+}
 }

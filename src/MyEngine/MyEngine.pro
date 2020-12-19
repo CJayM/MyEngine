@@ -8,11 +8,7 @@ CONFIG -= qt
 #LIBS += -L"../../libs/freeglut/bin/x64" -lfreeglut
 
 INCLUDEPATH += ../../libs/glad/include
-SOURCES += ../../libs/glad/src/gl.c \
-    app.cpp \
-    geom.cpp \
-    model.cpp \
-    simple_shader.cpp
+SOURCES += ../../libs/glad/src/gl.c
 
 INCLUDEPATH += ../../libs/glfw/include
 LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
@@ -23,11 +19,15 @@ LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
 
 
 SOURCES += \        
-        main.cpp
+    core/app.cpp \
+    core/geom.cpp \
+    core/model.cpp \
+    core/simple_shader.cpp \
+    main.cpp
 
 HEADERS += \
-    app.h \
-    geom.h \
-    model.h \
-    shaders_src.h \
-    simple_shader.h
+    core\app.h \
+    core\geom.h \
+    core\model.h \
+    core\shaders_src.h \
+    core\simple_shader.h

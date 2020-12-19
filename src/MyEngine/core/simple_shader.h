@@ -1,8 +1,10 @@
-#ifndef SIMPLESHADER_H
-#define SIMPLESHADER_H
+#ifndef CORE_SIMPLESHADER_H
+#define CORE_SIMPLESHADER_H
 
 #include <glad/gl.h>
 #include <glad/linmath.h>
+
+namespace core {
 
 class SimpleShader {
 public:
@@ -17,4 +19,5 @@ public:
     GLuint program;
 };
 
-#endif // SIMPLESHADER_H
+}
+#endif // CORE_SIMPLESHADER_H

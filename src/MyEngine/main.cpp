@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 
-#include "app.h"
+#include "core/app.h"
 
 int main(void)
 {
-    App app;
+    core::App app;
     app.init();    
     app.run();
 }

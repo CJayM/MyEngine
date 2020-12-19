@@ -1,10 +1,12 @@
-#ifndef MODEL_H
-#define MODEL_H
+#ifndef CORE_MODEL_H
+#define CORE_MODEL_H
 
 #include <array>
 #include <glad/gl.h>
 
 #include "geom.h"
+
+namespace core {
 
 class Model {
 public:
@@ -16,4 +18,6 @@ public:
     GLuint glData;
 };
 
-#endif // MODEL_H
+}
+
+#endif // CORE_MODEL_H
