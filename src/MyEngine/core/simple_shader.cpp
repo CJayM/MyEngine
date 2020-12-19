@@ -33,8 +33,8 @@ SimpleShader::SimpleShader()
         sizeof(Vertex), (void*)(sizeof(Coord2D)));
 }
 
-void SimpleShader::setMatrix(const mat4x4& matrix)
+void SimpleShader::setMatrix(const Matrix& matrix)
 {
-    glUniformMatrix4fv(cameraMatrix, 1, GL_FALSE, (const GLfloat*)matrix);
+    glUniformMatrix4fv(cameraMatrix, 1, GL_FALSE, (const GLfloat*)&matrix.data[0]);
 }
 }

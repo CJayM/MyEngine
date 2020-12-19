@@ -3,6 +3,7 @@
 #include <cassert>
 #include <stdio.h>
 
+
 namespace core {
 
 static App* GLOBAL_APP = nullptr;
@@ -31,7 +32,8 @@ void resize_callback(GLFWwindow* window, int width, int height)
     GLOBAL_APP->onResize(width, height);
 }
 
-App::App()
+App::App(std::string title)
+    : title_(title)
 {
 }
 
@@ -56,7 +58,7 @@ void App::init()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
-    window_ = glfwCreateWindow(800, 600, "Simple example", NULL, NULL);
+    window_ = glfwCreateWindow(800, 600, title_.c_str(), NULL, NULL);
     if (!window_) {
         exit(EXIT_FAILURE);
     }
@@ -78,8 +80,7 @@ void App::run()
     shader = new SimpleShader();
 
     float ratio;
-    int width, height;
-    mat4x4 m, p, mvp;
+
 
     double currentTime = glfwGetTime();
     double lastTime = currentTime;
@@ -90,19 +91,17 @@ void App::run()
 
         glfwPollEvents();
 
-        glfwGetFramebufferSize(window_, &width, &height);
-        ratio = width / (float)height;
+        glfwGetFramebufferSize(window_, &width_, &height_);
+        ratio = width_ / (float)height_;
 
-        glViewport(0, 0, width, height);
+        glViewport(0, 0, width_, height_);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        mat4x4_identity(m);
-        mat4x4_rotate_Z(m, m, (float)glfwGetTime());
-        mat4x4_ortho(p, -ratio, ratio, -1.f, 1.f, 1.f, -1.f);
-        mat4x4_mul(mvp, p, m);
+        camera_.setAngle(glfwGetTime());
+        camera_.setRatio(ratio);
 
         glUseProgram(shader->program);
-        shader->setMatrix(mvp);
+        shader->setMatrix(camera_.getMatrix());
         triangle->draw();
 
         glfwSwapBuffers(window_);

@@ -2,7 +2,7 @@
 #define CORE_SIMPLESHADER_H
 
 #include <glad/gl.h>
-#include <glad/linmath.h>
+#include "matrices.h"
 
 namespace core {
 
@@ -10,7 +10,7 @@ class SimpleShader {
 public:
     SimpleShader();
 
-    void setMatrix(const mat4x4& matrix);
+    void setMatrix(const Matrix& matrix);
 
     GLint vertex_positions;
     GLint vertex_colors;

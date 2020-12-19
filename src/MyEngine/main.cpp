@@ -1,12 +1,11 @@
+#include "game_app.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
-
-#include "core/app.h"
-
 int main(void)
 {
-    core::App app;
-    app.init();    
+    GameApp app("My game");
+    app.init();
     app.run();
 }
