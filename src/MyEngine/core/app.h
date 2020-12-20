@@ -5,9 +5,7 @@
 #include "model.h"
 #include "simple_shader.h"
 
-#include <glad/gl.h>
-#define GLFW_INCLUDE_NONE
-#include <GLFW/glfw3.h>
+#include "core/gl_headers.h"
 
 namespace core {
 
@@ -18,9 +16,7 @@ public:
     void init();
     void run();
 
-    virtual void onKey(int key, int scancode, int action, int mods);
-    virtual void onResize(int width, int height);
-    void onError(int error, const char* description);
+
 
 protected:
     std::string title_;

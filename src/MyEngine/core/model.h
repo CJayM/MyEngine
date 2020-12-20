@@ -2,7 +2,7 @@
 #define CORE_MODEL_H
 
 #include <array>
-#include <glad/gl.h>
+#include "core/gl_headers.h"
 
 #include "geom.h"
 
@@ -11,11 +11,12 @@ namespace core {
 class Model {
 public:
     Model();
+    ~Model();
 
     void draw();
-
-    std::array<Vertex, 3> data;
-    GLuint glData;
+    GLuint vertexBuffer;
+private:
+    GLuint vbo_, ibo_;
 };
 
 }

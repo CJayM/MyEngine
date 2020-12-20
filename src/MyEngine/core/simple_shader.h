@@ -1,7 +1,7 @@
 #ifndef CORE_SIMPLESHADER_H
 #define CORE_SIMPLESHADER_H
 
-#include <glad/gl.h>
+#include "core/gl_headers.h"
 #include "matrices.h"
 
 namespace core {

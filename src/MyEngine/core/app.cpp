@@ -3,33 +3,24 @@
 #include <cassert>
 #include <stdio.h>
 
-
 namespace core {
-
-static App* GLOBAL_APP = nullptr;
 
 void error_callback(int error, const char* description)
 {
-    if (GLOBAL_APP == nullptr)
-        return;
-
-    GLOBAL_APP->onError(error, description);
+    fprintf(stderr, "Error: %s\n", description);
+    fflush(stderr);
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
-    if (GLOBAL_APP == nullptr)
-        return;
-
-    GLOBAL_APP->onKey(key, scancode, action, mods);
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, GL_TRUE);
 }
 
 void resize_callback(GLFWwindow* window, int width, int height)
 {
-    if (GLOBAL_APP == nullptr)
-        return;
-
-    GLOBAL_APP->onResize(width, height);
+    fprintf(stderr, "Resize window: %dx%d\n", width, height);
+    fflush(stderr);
 }
 
 App::App(std::string title)
@@ -45,20 +36,18 @@ App::~App()
 
 void App::init()
 {
-    if (GLOBAL_APP == nullptr)
-        GLOBAL_APP = this;
-
     glfwSetErrorCallback(error_callback);
 
     if (!glfwInit())
         exit(EXIT_FAILURE);
 
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
     isInitialized_ = true;
 
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-
-    window_ = glfwCreateWindow(800, 600, title_.c_str(), NULL, NULL);
+    window_ = glfwCreateWindow(800, 600, title_.c_str(), nullptr, nullptr);
     if (!window_) {
         exit(EXIT_FAILURE);
     }
@@ -67,8 +56,11 @@ void App::init()
     glfwSetFramebufferSizeCallback(window_, resize_callback);
 
     glfwMakeContextCurrent(window_);
-    gladLoadGL(glfwGetProcAddress);
     glfwSwapInterval(1);
+
+    // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
+    glewExperimental = GL_TRUE;
+    glewInit();
 }
 
 void App::run()
@@ -80,7 +72,6 @@ void App::run()
     shader = new SimpleShader();
 
     float ratio;
-
 
     double currentTime = glfwGetTime();
     double lastTime = currentTime;
@@ -95,6 +86,8 @@ void App::run()
         ratio = width_ / (float)height_;
 
         glViewport(0, 0, width_, height_);
+
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         camera_.setAngle(glfwGetTime());
@@ -102,10 +95,10 @@ void App::run()
 
         glUseProgram(shader->program);
         shader->setMatrix(camera_.getMatrix());
+
         triangle->draw();
 
         glfwSwapBuffers(window_);
-
         currentTime = glfwGetTime();
     }
 
@@ -113,21 +106,5 @@ void App::run()
 
     glfwTerminate();
     exit(EXIT_SUCCESS);
-}
-
-void App::onKey(int key, int scancode, int action, int mods)
-{
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        glfwSetWindowShouldClose(window_, GLFW_TRUE);
-}
-
-void App::onResize(int width, int height)
-{
-    fprintf(stderr, "Resize window: %dx%d\n", width, height);
-}
-
-void App::onError(int error, const char* description)
-{
-    fprintf(stderr, "Error: %s\n", description);
 }
 }
