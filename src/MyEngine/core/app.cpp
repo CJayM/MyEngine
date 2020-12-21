@@ -1,8 +1,9 @@
 #include "app.h"
 
 #include <cassert>
-#include <stdio.h>
+#include <iostream>
 #include <math.h>
+#include <stdio.h>
 
 namespace core {
 
@@ -62,15 +63,16 @@ void App::init()
     // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
     glewExperimental = GL_TRUE;
     glewInit();
+
+    triangle = new Model();
+    shader = new Shader("resources\\shaders\\default.vert",
+                        "resources\\shaders\\default.frag");
 }
 
 void App::run()
 {
     assert(isInitialized_);
     assert(window_);
-
-    triangle = new Model();
-    shader = new Shader();
 
     float ratio;
 
@@ -94,13 +96,12 @@ void App::run()
         camera_.setAngle(glfwGetTime());
         camera_.setRatio(ratio);
 
-        glUseProgram(shader->program);
+        shader->use();
         shader->setMatrix(camera_.getMatrix());
 
         float timeValue = glfwGetTime();
         float greenValue = sin(timeValue) / 2.0f + 0.5f;
-        int vertexColorLocation = glGetUniformLocation(shader->program, "baseColor");
-        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+        shader->setBaseColor({0.0f, greenValue, 0.0f});
         triangle->draw();
 
         glfwSwapBuffers(window_);
