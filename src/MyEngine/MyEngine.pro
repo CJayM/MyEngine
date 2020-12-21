@@ -57,7 +57,5 @@ HEADERS += \
     core/shader.h
 
 DISTFILES += \
-    core/default.frag \
-    core/default.vert \
     resources/shaders/default.frag \
     resources/shaders/default.vert
