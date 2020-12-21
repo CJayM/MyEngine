@@ -2,6 +2,7 @@
 
 #include <cassert>
 #include <stdio.h>
+#include <math.h>
 
 namespace core {
 
@@ -96,6 +97,10 @@ void App::run()
         glUseProgram(shader->program);
         shader->setMatrix(camera_.getMatrix());
 
+        float timeValue = glfwGetTime();
+        float greenValue = sin(timeValue) / 2.0f + 0.5f;
+        int vertexColorLocation = glGetUniformLocation(shader->program, "baseColor");
+        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
         triangle->draw();
 
         glfwSwapBuffers(window_);
