@@ -2,7 +2,7 @@
 #define CORE_APP_H
 
 #include "camera.h"
-#include "model.h"
+#include "mesh.h"
 #include "shader.h"
 
 #include "core/gl_headers.h"
@@ -26,7 +26,7 @@ protected:
     int height_;
     Camera camera_;
 
-    Model* triangle = nullptr;
+    Mesh* mesh_ = nullptr;
     Shader* shader = nullptr;
 };
 }

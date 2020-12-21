@@ -1,5 +1,5 @@
-#ifndef CORE_MODEL_H
-#define CORE_MODEL_H
+#ifndef CORE_MESH_H
+#define CORE_MESH_H
 
 #include <array>
 #include "core/gl_headers.h"
@@ -8,10 +8,10 @@
 
 namespace core {
 
-class Model {
+class Mesh {
 public:
-    Model();
-    ~Model();
+    Mesh();
+    ~Mesh();
 
     void draw();
     GLuint vertexBuffer;
@@ -22,4 +22,4 @@ private:
 
 }
 
-#endif // CORE_MODEL_H
+#endif // CORE_MESH_H

@@ -73,7 +73,7 @@ void App::init()
     glewExperimental = GL_TRUE;
     glewInit();
 
-    triangle = new Model();
+    mesh_ = new Mesh();
     shader = new Shader("resources\\shaders\\default.vert",
         "resources\\shaders\\default.frag");
 }
@@ -111,7 +111,7 @@ void App::run()
         float timeValue = glfwGetTime();
         float greenValue = sin(timeValue) / 2.0f + 0.5f;
         shader->setBaseColor({ 0.0f, greenValue, 0.0f });
-        triangle->draw();
+        mesh_->draw();
 
         glfwSwapBuffers(window_);
         currentTime = glfwGetTime();

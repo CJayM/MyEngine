@@ -43,7 +43,7 @@ SOURCES +=  main.cpp \
     core/camera.cpp \
     core/geom.cpp \
     core/matrices.cpp \
-    core/model.cpp \
+    core/mesh.cpp \
     core/shader.cpp \
     game_app.cpp
 
@@ -53,7 +53,7 @@ HEADERS += \
     core/geom.h \
     core/gl_headers.h \
     core/matrices.h \
-    core/model.h \
+    core/mesh.h \
     core/shader.h
 
 DISTFILES += \
