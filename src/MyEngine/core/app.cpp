@@ -5,6 +5,9 @@
 #include <math.h>
 #include <stdio.h>
 
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+
 namespace core {
 
 void error_callback(int error, const char* description)
@@ -38,6 +41,7 @@ App::~App()
 
 void App::init()
 {
+
     glfwSetErrorCallback(error_callback);
 
     if (!glfwInit())
@@ -54,6 +58,11 @@ void App::init()
         exit(EXIT_FAILURE);
     }
 
+    GLFWimage icons[1];
+    icons[0].pixels = stbi_load("resources/app_icon.png", &icons[0].width, &icons[0].height, nullptr, 4);
+    glfwSetWindowIcon(window_, 1, icons);
+    stbi_image_free(icons[0].pixels);
+
     glfwSetKeyCallback(window_, key_callback);
     glfwSetFramebufferSizeCallback(window_, resize_callback);
 
@@ -66,7 +75,7 @@ void App::init()
 
     triangle = new Model();
     shader = new Shader("resources\\shaders\\default.vert",
-                        "resources\\shaders\\default.frag");
+        "resources\\shaders\\default.frag");
 }
 
 void App::run()
@@ -101,7 +110,7 @@ void App::run()
 
         float timeValue = glfwGetTime();
         float greenValue = sin(timeValue) / 2.0f + 0.5f;
-        shader->setBaseColor({0.0f, greenValue, 0.0f});
+        shader->setBaseColor({ 0.0f, greenValue, 0.0f });
         triangle->draw();
 
         glfwSwapBuffers(window_);
