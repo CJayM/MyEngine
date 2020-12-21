@@ -6,9 +6,9 @@
 
 namespace core {
 
-class SimpleShader {
+class Shader {
 public:
-    SimpleShader();
+    Shader();
 
     void setMatrix(const Matrix& matrix);
 

@@ -16,7 +16,8 @@ public:
     void draw();
     GLuint vertexBuffer;
 private:
-    GLuint vbo_, ibo_;
+    GLuint vbo_;
+//    GLuint ibo_;
 };
 
 }

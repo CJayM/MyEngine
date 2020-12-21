@@ -1,4 +1,4 @@
-#include "simple_shader.h"
+#include "shader.h"
 
 #include <iostream>
 
@@ -7,7 +7,7 @@
 
 namespace core {
 
-SimpleShader::SimpleShader()
+Shader::Shader()
 {
     GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertex_shader, 1, &VERTEX_SHADER_SRC, NULL);
@@ -61,7 +61,7 @@ SimpleShader::SimpleShader()
         sizeof(Vertex), (void*)(sizeof(Coord2D)));
 }
 
-void SimpleShader::setMatrix(const Matrix& matrix)
+void Shader::setMatrix(const Matrix& matrix)
 {
     glUniformMatrix4fv(cameraMatrix, 1, GL_FALSE, (const GLfloat*)&matrix.data[0]);
 }

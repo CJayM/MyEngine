@@ -70,7 +70,7 @@ void App::run()
     assert(window_);
 
     triangle = new Model();
-    shader = new SimpleShader();
+    shader = new Shader();
 
     float ratio;
 

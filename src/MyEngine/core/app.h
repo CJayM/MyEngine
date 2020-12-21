@@ -3,7 +3,7 @@
 
 #include "camera.h"
 #include "model.h"
-#include "simple_shader.h"
+#include "shader.h"
 
 #include "core/gl_headers.h"
 
@@ -27,7 +27,7 @@ protected:
     Camera camera_;
 
     Model* triangle = nullptr;
-    SimpleShader* shader = nullptr;
+    Shader* shader = nullptr;
 };
 }
 #endif // CORE_APP_H

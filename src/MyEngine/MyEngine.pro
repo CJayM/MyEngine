@@ -17,7 +17,7 @@ SOURCES +=  main.cpp \
     core/geom.cpp \
     core/matrices.cpp \
     core/model.cpp \
-    core/simple_shader.cpp \
+    core/shader.cpp \
     game_app.cpp
 
 HEADERS += \
@@ -27,5 +27,5 @@ HEADERS += \
     core/gl_headers.h \
     core/matrices.h \
     core/model.h \
-    core/shaders_src.h \
-    core/simple_shader.h
+    core/shader.h \
+    core/shaders_src.h
