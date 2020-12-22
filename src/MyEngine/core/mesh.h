@@ -1,8 +1,8 @@
 #ifndef CORE_MESH_H
 #define CORE_MESH_H
 
-#include <array>
 #include "core/gl_headers.h"
+#include <array>
 
 #include "geom.h"
 
@@ -14,12 +14,12 @@ public:
     ~Mesh();
 
     void draw();
-    GLuint vertexBuffer;
+    GLuint id;
+
 private:
     GLuint vbo_;
-//    GLuint ibo_;
+    GLuint ibo_;
 };
-
 }
 
 #endif // CORE_MESH_H

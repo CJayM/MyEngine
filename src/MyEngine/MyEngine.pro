@@ -19,6 +19,9 @@ Release:DESTDIR = $$OUT_PWD/release/bin
 shaders.files = $$files(resources/shaders/*)
 shaders.path = $$DESTDIR/resources/shaders/
 
+images.files = $$files(resources/images/*)
+images.path = $$DESTDIR/resources/images/
+
 reses.files = $$files(resources/*.png)
 reses.path = $$DESTDIR/resources/
 
@@ -26,7 +29,7 @@ deps.files = $$files(deps/*)
 deps.path = $$DESTDIR/
 
 COPIES += deps
-COPIES += reses shaders
+COPIES += reses shaders images
 
 INCLUDEPATH += ../../libs/glfw/include
 LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
@@ -34,7 +37,7 @@ LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
 INCLUDEPATH += ../../libs/glew/include
 LIBS += -L"../../libs/glew/lib/Release/x64" -lglew32
 
-INCLUDEPATH += other/
+#INCLUDEPATH += other/
 
 win32:RC_ICONS += my_engine.ico
 
@@ -45,6 +48,7 @@ SOURCES +=  main.cpp \
     core/matrices.cpp \
     core/mesh.cpp \
     core/shader.cpp \
+    core/texture.cpp \
     game_app.cpp
 
 HEADERS += \
@@ -54,7 +58,9 @@ HEADERS += \
     core/gl_headers.h \
     core/matrices.h \
     core/mesh.h \
-    core/shader.h
+    core/shader.h \
+    core/texture.h \
+    other/stb_image.h
 
 DISTFILES += \
     resources/shaders/default.frag \

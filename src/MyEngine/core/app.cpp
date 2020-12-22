@@ -5,8 +5,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include "other/stb_image.h"
 
 namespace core {
 
@@ -76,6 +75,7 @@ void App::init()
     mesh_ = new Mesh();
     shader = new Shader("resources\\shaders\\default.vert",
         "resources\\shaders\\default.frag");
+    texture = new Texture("resources\\images\\720_icylake.jpg");
 }
 
 void App::run()
@@ -102,15 +102,14 @@ void App::run()
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        camera_.setAngle(glfwGetTime());
+        camera_.setAngle(currentTime);
         camera_.setRatio(ratio);
 
+        float pulseColor = sin(currentTime) / 2.0f + 0.5f;
         shader->use();
+        shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
+        shader->setTexture(texture->id);
         shader->setMatrix(camera_.getMatrix());
-
-        float timeValue = glfwGetTime();
-        float greenValue = sin(timeValue) / 2.0f + 0.5f;
-        shader->setBaseColor({ 0.0f, greenValue, 0.0f });
         mesh_->draw();
 
         glfwSwapBuffers(window_);

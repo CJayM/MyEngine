@@ -8,5 +8,4 @@
 // GLFW
 #include <GLFW/glfw3.h>
 
-
 #endif // CORE_GL_HEADERS_H

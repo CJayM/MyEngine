@@ -15,6 +15,7 @@ public:
 
     void setMatrix(const Matrix& matrix);
     void setBaseColor(Color3f color);
+    void setTexture(GLuint id);
 
     GLint vertex_positions;
     GLint vertex_colors;

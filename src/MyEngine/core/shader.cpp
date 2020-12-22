@@ -84,7 +84,16 @@ void Shader::setMatrix(const Matrix& matrix)
 
 void Shader::setBaseColor(Color3f color)
 {
-    glUniform3f(baseColor, color.r,color.g,color.b);
+    glUniform3f(baseColor, color.r, color.g, color.b);
+}
+
+void Shader::setTexture(GLuint textureId)
+{
+    glUniform1i(glGetUniformLocation(program, "texture1"), 0);
+    glBindTexture(GL_TEXTURE_2D, textureId);
+
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, textureId);
 }
 
 void Shader::checkCompileErrors(unsigned int shader, std::string type)

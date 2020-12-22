@@ -4,6 +4,7 @@
 #include "camera.h"
 #include "mesh.h"
 #include "shader.h"
+#include "texture.h"
 
 #include "core/gl_headers.h"
 
@@ -28,6 +29,7 @@ protected:
 
     Mesh* mesh_ = nullptr;
     Shader* shader = nullptr;
+    Texture* texture = nullptr;
 };
 }
 #endif // CORE_APP_H
