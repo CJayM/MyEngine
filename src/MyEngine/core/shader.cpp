@@ -66,10 +66,10 @@ Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath)
 
     glEnableVertexAttribArray(vertex_positions);
     glVertexAttribPointer(vertex_positions, 2, GL_FLOAT, GL_FALSE,
-        sizeof(Vertex), (void*)(0));
+        sizeof(Vertex3D), (void*)(0));
     glEnableVertexAttribArray(vertex_colors);
     glVertexAttribPointer(vertex_colors, 3, GL_FLOAT, GL_FALSE,
-        sizeof(Vertex), (void*)(sizeof(Coord2D)));
+        sizeof(Vertex3D), (void*)(sizeof(Coord2D)));
 }
 
 void Shader::use()

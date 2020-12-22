@@ -4,8 +4,6 @@
 #include "core/gl_headers.h"
 #include <array>
 
-#include "geom.h"
-
 namespace core {
 
 class Mesh {

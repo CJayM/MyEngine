@@ -7,14 +7,24 @@ struct Coord2D {
     float x, y;
 };
 
+struct Coord3D{
+    float x, y, z;
+};
+
 struct Color3f {
     float r, g, b;
 };
 
-struct Vertex {
-    Coord2D pos;
-    Color3f color;
+struct UV{
+    float u, v;
 };
+
+struct Vertex3D {
+    Coord3D pos;
+    Color3f color;
+    UV uv;
+};
+
 }
 
 #endif // CORE_GEOM_H
