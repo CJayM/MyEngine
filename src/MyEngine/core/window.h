@@ -7,28 +7,25 @@
 
 namespace core {
 
-
-class Window
-{
+class Window {
 public:
     Window(int width, int height, std::string title);
-    ~Window();
+    virtual ~Window();
 
     void setIcon(std::string path);
-    void onResize(int width, int height);
-    void swap();
-    void activate();
+    void swapBuffer();
+
     bool isClosed() const;
 
-    float ratio;
+    virtual void onKey(int key, int scancode, int action, int mods);
+    virtual void onResize(int width, int height);
+
     int width;
     int height;
-    std::string title;
+    float ratio;
 
 private:
-    GLFWwindow* window = nullptr;
+    GLFWwindow* window_ = nullptr;
 };
-
 }
-
 #endif // CORE_WINDOW_H

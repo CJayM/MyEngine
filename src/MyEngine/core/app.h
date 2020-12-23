@@ -8,6 +8,7 @@
 #include "window.h"
 
 #include "core/gl_headers.h"
+#include "core/window.h"
 
 namespace core {
 
@@ -18,18 +19,12 @@ public:
     void init();
     void run();
 
-
-
 protected:
     std::string title_;
     bool isInitialized_ = false;
-    Window *currentWindow = nullptr;
 
     Camera camera_;
-
-    Mesh* mesh_ = nullptr;
-    Shader* shader = nullptr;
-    Texture* texture = nullptr;
+    Window* window = nullptr;
 };
 }
 #endif // CORE_APP_H

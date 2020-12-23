@@ -10,8 +10,6 @@ class Camera {
 public:
     Camera();
 
-
-
     void setPos(float x, float y);
     void setAngle(float angle);
     void setRatio(float ratio);
