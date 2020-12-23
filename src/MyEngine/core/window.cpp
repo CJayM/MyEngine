@@ -2,21 +2,26 @@
 
 #include "other/stb_image.h"
 
+namespace core {
+
 void resize_callback(GLFWwindow* window, int width, int height)
 {
     auto wnd = reinterpret_cast<core::Window*>(glfwGetWindowUserPointer(window));
-    if (wnd)
+    if (wnd) {
         wnd->onResize(width, height);
+        if (wnd->app_)
+            wnd->app_->onResize(wnd, width, height);
+    }
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
     auto wnd = reinterpret_cast<core::Window*>(glfwGetWindowUserPointer(window));
-    if (wnd)
-        wnd->onKey(key, scancode, action, mods);
+    if (wnd) {
+        if (wnd->app_)
+            wnd->app_->onKey(wnd, key, scancode, action, mods);
+    }
 }
-
-namespace core {
 
 Window::Window(int width, int height, std::string pTitle)
 {
@@ -38,6 +43,11 @@ Window::Window(int width, int height, std::string pTitle)
     onResize(w, h);
 }
 
+void Window::setApp(IApp* pApp)
+{
+    app_ = pApp;
+}
+
 Window::~Window()
 {
     glfwDestroyWindow(window_);
@@ -56,15 +66,14 @@ void Window::swapBuffer()
     glfwSwapBuffers(window_);
 }
 
+void Window::close()
+{
+    glfwSetWindowShouldClose(window_, GL_TRUE);
+}
+
 bool Window::isClosed() const
 {
     return glfwWindowShouldClose(window_);
-}
-
-void Window::onKey(int key, int scancode, int action, int mods)
-{
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        glfwSetWindowShouldClose(window_, GL_TRUE);
 }
 
 void Window::onResize(int pWidth, int pHeight)

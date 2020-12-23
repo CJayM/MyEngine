@@ -51,7 +51,7 @@ SOURCES +=  main.cpp \
     core/shader.cpp \
     core/texture.cpp \
     core/window.cpp \
-    game_app.cpp
+    core/iapp.cpp
 
 HEADERS += \
     core/app.h \
@@ -64,6 +64,7 @@ HEADERS += \
     core/shader.h \
     core/texture.h \
     core/window.h \
+    core/iapp.h \
     other/stb_image.h
 
 DISTFILES += \
