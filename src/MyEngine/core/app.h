@@ -5,6 +5,7 @@
 #include "mesh.h"
 #include "shader.h"
 #include "texture.h"
+#include "window.h"
 
 #include "core/gl_headers.h"
 
@@ -22,9 +23,8 @@ public:
 protected:
     std::string title_;
     bool isInitialized_ = false;
-    GLFWwindow* window_ = nullptr;
-    int width_;
-    int height_;
+    Window *currentWindow = nullptr;
+
     Camera camera_;
 
     Mesh* mesh_ = nullptr;

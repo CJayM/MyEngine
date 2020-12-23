@@ -15,18 +15,6 @@ void error_callback(int error, const char* description)
     fflush(stderr);
 }
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-{
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, GL_TRUE);
-}
-
-void resize_callback(GLFWwindow* window, int width, int height)
-{
-    fprintf(stderr, "Resize window: %dx%d\n", width, height);
-    fflush(stderr);
-}
-
 App::App(std::string title)
     : title_(title)
 {
@@ -40,7 +28,6 @@ App::~App()
 
 void App::init()
 {
-
     glfwSetErrorCallback(error_callback);
 
     if (!glfwInit())
@@ -52,21 +39,10 @@ void App::init()
 
     isInitialized_ = true;
 
-    window_ = glfwCreateWindow(800, 600, title_.c_str(), nullptr, nullptr);
-    if (!window_) {
-        exit(EXIT_FAILURE);
-    }
+    currentWindow = new Window(800, 600, "My Game");
+    currentWindow->setIcon("resources/app_icon.png");
 
-    GLFWimage icons[1];
-    icons[0].pixels = stbi_load("resources/app_icon.png", &icons[0].width, &icons[0].height, nullptr, 4);
-    glfwSetWindowIcon(window_, 1, icons);
-    stbi_image_free(icons[0].pixels);
-
-    glfwSetKeyCallback(window_, key_callback);
-    glfwSetFramebufferSizeCallback(window_, resize_callback);
-
-    glfwMakeContextCurrent(window_);
-    glfwSwapInterval(1);
+    currentWindow->activate();
 
     // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
     glewExperimental = GL_TRUE;
@@ -81,29 +57,25 @@ void App::init()
 void App::run()
 {
     assert(isInitialized_);
-    assert(window_);
-
-    float ratio;
 
     double currentTime = glfwGetTime();
     double lastTime = currentTime;
     double delta = 0;
-    while (!glfwWindowShouldClose(window_)) {
+    while (currentWindow->isClosed() == false) {
         delta = currentTime - lastTime;
         lastTime = currentTime;
 
         glfwPollEvents();
 
-        glfwGetFramebufferSize(window_, &width_, &height_);
-        ratio = width_ / (float)height_;
-
-        glViewport(0, 0, width_, height_);
+        glViewport(0, 0, currentWindow->width, currentWindow->height);
 
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        camera_.setAngle(currentTime*0.4);
-        camera_.setRatio(ratio);
+        camera_.setAngle(currentTime * 0.4);
+
+        currentWindow->ratio = currentWindow->width / float(currentWindow->height);
+        camera_.setRatio(currentWindow->ratio);
 
         float pulseColor = sin(currentTime) / 2.0f + 0.5f;
         shader->use();
@@ -112,11 +84,9 @@ void App::run()
         shader->setMatrix(camera_.getMatrix());
         mesh_->draw();
 
-        glfwSwapBuffers(window_);
+        currentWindow->swap();
         currentTime = glfwGetTime();
     }
-
-    glfwDestroyWindow(window_);
 
     glfwTerminate();
     exit(EXIT_SUCCESS);
