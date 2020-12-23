@@ -45,6 +45,7 @@ SOURCES +=  main.cpp \
     core/app.cpp \
     core/camera.cpp \
     core/geom.cpp \
+    core/material.cpp \
     core/matrices.cpp \
     core/mesh.cpp \
     core/shader.cpp \
@@ -57,6 +58,7 @@ HEADERS += \
     core/camera.h \
     core/geom.h \
     core/gl_headers.h \
+    core/material.h \
     core/matrices.h \
     core/mesh.h \
     core/shader.h \

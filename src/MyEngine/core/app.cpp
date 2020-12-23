@@ -5,6 +5,11 @@
 #include <math.h>
 #include <stdio.h>
 
+#include "core/material.h"
+#include "core/mesh.h"
+#include "core/shader.h"
+#include "core/texture.h"
+
 #include "other/stb_image.h"
 
 namespace core {
@@ -51,10 +56,12 @@ void App::run()
 {
     assert(isInitialized_);
 
+    auto material = new Material(
+        std::make_shared<Shader>("resources\\shaders\\default.vert",
+            "resources\\shaders\\default.frag"),
+        std::make_shared<Texture>("resources\\images\\720_icylake.jpg"));
+
     auto mesh = new Mesh();
-    auto shader = new Shader("resources\\shaders\\default.vert",
-        "resources\\shaders\\default.frag");
-    auto texture = new Texture("resources\\images\\720_icylake.jpg");
 
     double currentTime = glfwGetTime();
     double lastTime = currentTime;
@@ -75,10 +82,8 @@ void App::run()
         camera_.setRatio(window->ratio);
 
         float pulseColor = sin(currentTime) / 2.0f + 0.5f;
-        shader->use();
-        shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
-        shader->setTexture(texture->id);
-        shader->setMatrix(camera_.getMatrix());
+        material->use(&camera_);
+        material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
         mesh->draw();
 
         window->swapBuffer();

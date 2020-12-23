@@ -1,14 +1,10 @@
 #ifndef CORE_APP_H
 #define CORE_APP_H
 
-#include "camera.h"
-#include "mesh.h"
-#include "shader.h"
-#include "texture.h"
-#include "window.h"
-
 #include "core/gl_headers.h"
+
 #include "core/window.h"
+#include "core/camera.h"
 
 namespace core {
 
