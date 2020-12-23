@@ -12,6 +12,8 @@ void Camera::updateMatrix()
         return;
 
     model_.identity();
+    model_ = model_.translate(pos_.x, pos_.y);
+    model_ = model_.scale(zoom_,  zoom_);
     model_ = model_.rotateZ(angle_);
     matrix_ = perspective_ * model_;
 
@@ -46,6 +48,42 @@ void Camera::setRatio(float ratio)
     isMatrixDirty_ = true;
     ratio_ = ratio;
     perspective_ = Matrix::ortho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
+}
+
+void Camera::up(float step)
+{
+    pos_.y += step;
+    isMatrixDirty_ = true;
+}
+
+void Camera::down(float step)
+{
+    pos_.y -= step;
+    isMatrixDirty_ = true;
+}
+
+void Camera::left(float step)
+{
+    pos_.x -= step;
+    isMatrixDirty_ = true;
+}
+
+void Camera::right(float step)
+{
+    pos_.x += step;
+    isMatrixDirty_ = true;
+}
+
+void Camera::zoomIn(float step)
+{
+    zoom_ *= (1+step);
+    isMatrixDirty_ = true;
+}
+
+void Camera::zoomOut(float step)
+{
+    zoom_ *= (1-step);
+    isMatrixDirty_ = true;
 }
 
 Matrix Camera::getMatrix()

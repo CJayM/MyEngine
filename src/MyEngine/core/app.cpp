@@ -2,13 +2,7 @@
 
 #include <cassert>
 #include <iostream>
-#include <math.h>
 #include <stdio.h>
-
-#include "core/material.h"
-#include "core/mesh.h"
-#include "core/shader.h"
-#include "core/texture.h"
 
 #include "other/stb_image.h"
 
@@ -49,18 +43,14 @@ void App::run()
 {
     assert(isInitialized_);
 
-    auto material = new Material(
-        std::make_shared<Shader>("resources\\shaders\\default.vert",
-            "resources\\shaders\\default.frag"),
-        std::make_shared<Texture>("resources\\images\\720_icylake.jpg"));
-
-    auto mesh = new Mesh();
-
     double currentTime = glfwGetTime();
     double lastTime = currentTime;
     double delta = 0;
 
     while (!needExit_) {
+        if (currentWindow_->isClosed())
+            break;
+
         delta = currentTime - lastTime;
         lastTime = currentTime;
 
@@ -71,13 +61,9 @@ void App::run()
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        camera_.setAngle(currentTime * 0.4);
-        camera_.setRatio(currentWindow_->ratio);
-
-        float pulseColor = sin(currentTime) / 2.0f + 0.5f;
-        material->use(&camera_);
-        material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
-        mesh->draw();
+        if (scene_) {
+            scene_->update(currentTime, delta, currentWindow_->ratio);
+        }
 
         currentWindow_->swapBuffer();
         currentTime = glfwGetTime();
@@ -102,11 +88,19 @@ std::shared_ptr<Window> App::createWindow(int width, int height, std::string tit
     return result;
 }
 
+void App::setScene(Scene* scene)
+{
+    scene_ = scene;
+}
+
 void App::onKey(Window* wnd, int key, int scancode, int action, int mods)
 {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         wnd->close();
         needExit_ = true;
     }
+
+    if (scene_!=nullptr)
+        scene_->onKey(key, scancode, action, mods);
 }
 }

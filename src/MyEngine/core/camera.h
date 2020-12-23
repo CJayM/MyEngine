@@ -13,9 +13,19 @@ public:
     void setPos(float x, float y);
     void setAngle(float angle);
     void setRatio(float ratio);
+
+    void up(float step);
+    void down(float step);
+    void left(float step);
+    void right(float step);
+
+    void zoomIn(float step);
+    void zoomOut(float step);
+
     Matrix getMatrix();
 protected:
     Coord2D pos_ = { 0, 0 };
+    float zoom_ = 1.0;
     float height = 100;
     float angle_ = 0;
 

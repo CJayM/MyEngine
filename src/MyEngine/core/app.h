@@ -6,6 +6,8 @@
 #include "core/camera.h"
 #include "core/iapp.h"
 #include "core/window.h"
+#include "core/scene.h"
+
 #include <memory>
 
 namespace core {
@@ -17,6 +19,7 @@ public:
     void init();
     void run();
     std::shared_ptr<Window> createWindow(int width, int height, std::string title);
+    void setScene(Scene* scene);
 
 protected:
     std::string title_;
@@ -24,7 +27,7 @@ protected:
     bool needExit_ = false;
 
     std::shared_ptr<Window> currentWindow_ = nullptr;
-    Camera camera_;
+    Scene* scene_ = nullptr;
 
     // IApp interface
 public:

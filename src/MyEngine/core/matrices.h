@@ -11,6 +11,8 @@ struct Matrix {
 
     void identity();
     Matrix rotateZ(float angle);
+    Matrix translate(float x, float y);
+    Matrix scale(float x, float y);
     static Matrix ortho(float l, float r, float b, float t, float n, float f);
 
 };

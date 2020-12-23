@@ -32,6 +32,20 @@ Matrix Matrix::rotateZ(float angle)
     return *this * result;
 }
 
+Matrix Matrix::translate(float x, float y)
+{
+    data[3][0] = x;
+    data[3][1] = y;
+    return *this;
+}
+
+Matrix Matrix::scale(float x, float y)
+{
+    data[0][0] *= x;
+    data[1][1] *= y;
+    return *this;
+}
+
 Matrix Matrix::ortho(float l, float r, float b, float t, float n, float f)
 {
     Matrix M;
