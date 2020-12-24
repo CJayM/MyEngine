@@ -27,8 +27,8 @@ protected:
     std::shared_ptr<Mesh> mesh;
 
     const float width_;
-    const float height_;
-    const float ratio_;
+    const float height_;    
+    const float ratio_;    
     double mouseX_;
     double mouseY_;
 };

@@ -14,7 +14,7 @@ public:
 
     void setPos(float x, float y);
     void setAngle(float angle);
-    void setViewSize(float width, float height, float ratio);
+    void setViewSize(float width, float height);
 
     void up(float step);
     void down(float step);

@@ -54,10 +54,10 @@ void Camera::setAngle(float angle)
     angle_ = angle;
 }
 
-void Camera::setViewSize(float width, float height, float ratio)
+void Camera::setViewSize(float width, float height)
 {
     float halfW = width * 0.5 ;
-    float halfH = height * 0.5 * ratio;
+    float halfH = height * 0.5;
     perspective_ = Matrix::ortho(-halfW, halfW, -halfH, halfH, -100, 100);
     isMatrixDirty_ = true;
 }

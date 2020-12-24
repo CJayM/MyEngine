@@ -35,12 +35,22 @@ void Scene::update(float current, float delta)
 
     float pulseColor = sin(current) / 2.0f + 0.5f;
     material->use(camera_.get());
-    material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });    
+    material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
 }
 
 void Scene::updateSize(float width, float height)
 {
-    camera_->setViewSize(width, height, ratio_);
+    auto newRatio_ = width / height;
+    float newWidth, newHeight;
+    if (newRatio_ < ratio_) {
+        newWidth = width * height_ / height;
+        newHeight = height_;
+    } else {
+        newWidth = width_;
+        newHeight = height * width_/width;
+    }
+
+    camera_->setViewSize(newWidth, newHeight);
 }
 
 void Scene::draw()
@@ -83,10 +93,10 @@ void Scene::onMouseClick(int key, int action, int mods)
 {
     fprintf(stdout, "Mouse: %d \t %d \t%d\n", key, action, mods);
     fflush(stdout);
-    if (key == 0){
-        if (action == 1){
+    if (key == 0) {
+        if (action == 1) {
             camera_->startDrag(mouseX_, mouseY_);
-        }else{
+        } else {
             camera_->endDrag(mouseX_, mouseY_);
         }
     }
