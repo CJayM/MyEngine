@@ -6,6 +6,20 @@ Camera::Camera()
 {
 }
 
+void Camera::update(double mouseX, double mouseY)
+{
+
+    if (isDragged_){
+        auto delta = Coord2D(mouseX, mouseY) - dragStart_;
+        pos_.x = oldPos_.x + delta.x ;
+        pos_.y = oldPos_.y - delta.y /      ratio_;
+        isMatrixDirty_ = true;
+//        fprintf(stdout, "Drag: %fx%f\n", mouseX, mouseY);
+        fprintf(stdout, "Drag: %fx%f\n", delta.x, delta.y);
+        fflush(stdout);
+    }
+}
+
 void Camera::updateMatrix()
 {
     if (isMatrixDirty_ == false)
@@ -88,6 +102,24 @@ void Camera::scaleDown(float step)
 
     fprintf(stdout, "Scale: %f\n", scale_);
     fflush(stdout);
+}
+
+void Camera::startDrag(double x, double y)
+{
+    dragStart_.x = x;
+    dragStart_.y = y;
+
+    fprintf(stdout, "Drag START: %fx%f\n", x, y);
+    fflush(stdout);
+
+    oldPos_ = pos_;
+
+    isDragged_ = true;
+}
+
+void Camera::endDrag(double x, double y)
+{
+    isDragged_ = false;
 }
 
 Matrix Camera::getMatrix()

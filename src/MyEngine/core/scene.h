@@ -15,7 +15,11 @@ public:
     void update(float current, float delta);
     void updateSize(float width, float height);
 
+    void draw();
+
     virtual void onKey(int key, int scancode, int action, int mods);
+    virtual void onMouseMove(double xPos, double yPos);
+    virtual void onMouseClick(int key, int action, int mods);
 
 protected:
     std::shared_ptr<Camera> camera_ = nullptr;
@@ -25,6 +29,8 @@ protected:
     const float width_;
     const float height_;
     const float ratio_;
+    double mouseX_;
+    double mouseY_;
 };
 
 }

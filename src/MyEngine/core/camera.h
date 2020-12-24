@@ -10,6 +10,8 @@ class Camera {
 public:
     Camera();
 
+    void update(double mouseX, double mouseY);
+
     void setPos(float x, float y);
     void setAngle(float angle);
     void setViewSize(float width, float height, float ratio);
@@ -22,9 +24,14 @@ public:
     void scaleUp(float step);
     void scaleDown(float step);
 
+    void startDrag(double x, double y);
+    void endDrag(double x, double y);
+
     Matrix getMatrix();
 protected:
     Coord2D pos_ = { 0, 0 };
+    Coord2D oldPos_;
+
     float scale_ = 1.0;
     float height = 100;
     float angle_ = 0;
@@ -35,6 +42,9 @@ protected:
 
     float ratio_ = 1.0;
     bool isMatrixDirty_ = true;
+
+    bool isDragged_ = false;
+    Coord2D dragStart_;
 
     void updateMatrix();
 };

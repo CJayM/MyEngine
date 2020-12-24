@@ -5,6 +5,13 @@ namespace core {
 
 struct Coord2D {
     float x, y;
+
+    Coord2D();
+    Coord2D(float x, float y);
+    Coord2D(const Coord2D& other);
+
+    Coord2D operator+(const Coord2D& other);
+    Coord2D operator-(const Coord2D& other);
 };
 
 struct Coord3D{

@@ -24,6 +24,27 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     }
 }
 
+void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    auto wnd = reinterpret_cast<core::Window*>(glfwGetWindowUserPointer(window));
+    if (wnd) {
+        if (wnd->app_)
+            wnd->app_->onMouseMove(wnd, xpos, ypos);
+    }
+}
+
+
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    auto wnd = reinterpret_cast<core::Window*>(glfwGetWindowUserPointer(window));
+    if (wnd) {
+        if (wnd->app_)
+            wnd->app_->onMouseClick(wnd, button, action, mods);
+    }
+}
+
+
+
 Window::Window(int width, int height, std::string pTitle)
 {
     window_ = glfwCreateWindow(width, height, pTitle.c_str(), nullptr, nullptr);
@@ -34,6 +55,8 @@ Window::Window(int width, int height, std::string pTitle)
     glfwSetWindowUserPointer(window_, this);
 
     glfwSetKeyCallback(window_, key_callback);
+    glfwSetCursorPosCallback(window_, cursor_position_callback);
+    glfwSetMouseButtonCallback(window_, mouse_button_callback);
     glfwSetFramebufferSizeCallback(window_, resize_callback);
 
     glfwMakeContextCurrent(window_);
@@ -75,6 +98,11 @@ void Window::close()
 bool Window::isClosed() const
 {
     return glfwWindowShouldClose(window_);
+}
+
+void Window::update()
+{
+    glfwGetCursorPos(window_, &cursorX, &cursorY);
 }
 
 void Window::onResize(int pWidth, int pHeight)

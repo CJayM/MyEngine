@@ -53,16 +53,20 @@ void App::run()
 
         delta = currentTime - lastTime;
         lastTime = currentTime;
-
+        // update
         glfwPollEvents();
-
-        glViewport(0, 0, currentWindow_->width, currentWindow_->height);
-
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        currentWindow_->update();
 
         if (scene_) {
+            scene_->onMouseMove(currentWindow_->cursorX, currentWindow_->cursorY);
             scene_->update(currentTime, delta);
+        }
+
+        // draw
+        glViewport(0, 0, currentWindow_->width, currentWindow_->height);
+
+        if (scene_) {
+            scene_->draw();
         }
 
         currentWindow_->swapBuffer();
@@ -100,12 +104,24 @@ void App::onKey(Window* wnd, int key, int scancode, int action, int mods)
         needExit_ = true;
     }
 
-    if (scene_!=nullptr)
+    if (scene_ != nullptr)
         scene_->onKey(key, scancode, action, mods);
 }
 
-void App::onResize(Window *wnd, int width, int height)
+void App::onResize(Window* wnd, int width, int height)
 {
     scene_->updateSize(width, height);
+}
+
+void App::onMouseMove(Window* wnd, double xPos, double yPos)
+{
+    //    if (scene_ != nullptr)
+    //        scene_->onMouseMove(xPos, yPos);
+}
+
+void App::onMouseClick(Window* wnd, int key, int action, int mods)
+{
+    if (scene_ != nullptr)
+        scene_->onMouseClick(key, action, mods);
 }
 }

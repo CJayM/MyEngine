@@ -13,6 +13,8 @@ public:
 
     virtual void onResize(Window* wnd, int width, int height) = 0;
     virtual void onKey(Window* wnd, int key, int scancode, int action, int mods) = 0;
+    virtual void onMouseMove(Window* wnd, double xPos, double yPos) = 0;
+    virtual void onMouseClick(Window* wnd, int key, int action, int mods) = 0;
 };
 
 }

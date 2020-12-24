@@ -31,15 +31,24 @@ Scene::~Scene()
 
 void Scene::update(float current, float delta)
 {
+    camera_->update(mouseX_, mouseY_);
+
     float pulseColor = sin(current) / 2.0f + 0.5f;
     material->use(camera_.get());
-    material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
-    mesh->draw();
+    material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });    
 }
 
 void Scene::updateSize(float width, float height)
 {
     camera_->setViewSize(width, height, ratio_);
+}
+
+void Scene::draw()
+{
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    mesh->draw();
 }
 
 void Scene::onKey(int key, int scancode, int action, int mods)
@@ -61,6 +70,25 @@ void Scene::onKey(int key, int scancode, int action, int mods)
             camera_->scaleUp(0.05);
         if (key == KeyConstats::NUM_PLUS)
             camera_->scaleDown(0.05);
+    }
+}
+
+void Scene::onMouseMove(double xPos, double yPos)
+{
+    mouseX_ = xPos;
+    mouseY_ = yPos;
+}
+
+void Scene::onMouseClick(int key, int action, int mods)
+{
+    fprintf(stdout, "Mouse: %d \t %d \t%d\n", key, action, mods);
+    fflush(stdout);
+    if (key == 0){
+        if (action == 1){
+            camera_->startDrag(mouseX_, mouseY_);
+        }else{
+            camera_->endDrag(mouseX_, mouseY_);
+        }
     }
 }
 }
