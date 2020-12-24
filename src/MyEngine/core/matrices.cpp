@@ -34,10 +34,11 @@ Matrix Matrix::rotateZ(float angle)
 
 Matrix Matrix::translate(float x, float y, float z)
 {
-    data[3][0] = x;
-    data[3][1] = y;
-    data[3][2] = z;
-    return *this;
+    Matrix result;
+    result.data[3][0] = x;
+    result.data[3][1] = y;
+    result.data[3][2] = z;
+    return *this * result;
 }
 
 Matrix Matrix::scale(float x, float y)

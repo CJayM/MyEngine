@@ -12,7 +12,7 @@ void Camera::updateMatrix()
         return;
 
     model_.identity();
-    model_ = model_.translate(-pos_.x, -pos_.y);
+    model_ = model_.translate(pos_.x, pos_.y, 0);
     model_ = model_.scale(scale_, scale_);
     model_ = model_.rotateZ(angle_);
     matrix_ = perspective_ * model_;
@@ -50,25 +50,25 @@ void Camera::setViewSize(float width, float height, float ratio)
 
 void Camera::up(float step)
 {
-    pos_.y += step;
+    pos_.y -= step;
     isMatrixDirty_ = true;
 }
 
 void Camera::down(float step)
 {
-    pos_.y -= step;
+    pos_.y += step;
     isMatrixDirty_ = true;
 }
 
 void Camera::left(float step)
 {
-    pos_.x -= step;
+    pos_.x += step;
     isMatrixDirty_ = true;
 }
 
 void Camera::right(float step)
 {
-    pos_.x += step;
+    pos_.x -= step;
     isMatrixDirty_ = true;
 }
 

@@ -2,10 +2,16 @@
 #define CORE_KEY_CONSTANTS_H
 
 struct KeyConstats{
+    enum PRESS_MODE{
+        PRESS_UP = 0,
+        PRESS_DOWN = 1,
+        PRESS_HOLD
+    };
+
     enum KEY_CONSTANTS{
         ARROW_RIGHT = 262,
         ARROW_LEFT = 263,
-        ARROW_DOWN = 265,
+        ARROW_DOWN = 264,
         ARROW_UP = 265,
 
         NUM_MINUS = 333,
