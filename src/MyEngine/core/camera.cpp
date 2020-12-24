@@ -7,13 +7,13 @@ Camera::Camera()
 }
 
 void Camera::updateMatrix()
-{    
+{
     if (isMatrixDirty_ == false)
         return;
 
     model_.identity();
-    model_ = model_.translate(pos_.x, pos_.y);
-    model_ = model_.scale(zoom_,  zoom_);
+    model_ = model_.translate(-pos_.x, -pos_.y);
+    model_ = model_.scale(scale_, scale_);
     model_ = model_.rotateZ(angle_);
     matrix_ = perspective_ * model_;
 
@@ -40,14 +40,12 @@ void Camera::setAngle(float angle)
     angle_ = angle;
 }
 
-void Camera::setRatio(float ratio)
+void Camera::setViewSize(float width, float height, float ratio)
 {
-    if (ratio == ratio_)
-        return;
-
+    float halfW = width * 0.5 ;
+    float halfH = height * 0.5 * ratio;
+    perspective_ = Matrix::ortho(-halfW, halfW, -halfH, halfH, -100, 100);
     isMatrixDirty_ = true;
-    ratio_ = ratio;
-    perspective_ = Matrix::ortho(-ratio, ratio, -1.f, 1.f, 1.f, -1.f);
 }
 
 void Camera::up(float step)
@@ -74,16 +72,22 @@ void Camera::right(float step)
     isMatrixDirty_ = true;
 }
 
-void Camera::zoomIn(float step)
+void Camera::scaleUp(float step)
 {
-    zoom_ *= (1+step);
+    scale_ *= (1 + step);
     isMatrixDirty_ = true;
+
+    fprintf(stdout, "Scale: %f\n", scale_);
+    fflush(stdout);
 }
 
-void Camera::zoomOut(float step)
+void Camera::scaleDown(float step)
 {
-    zoom_ *= (1-step);
+    scale_ *= (1 - step);
     isMatrixDirty_ = true;
+
+    fprintf(stdout, "Scale: %f\n", scale_);
+    fflush(stdout);
 }
 
 Matrix Camera::getMatrix()

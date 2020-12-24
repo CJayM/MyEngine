@@ -3,17 +3,20 @@
 
 char* FILE_PATH;
 
-int main(int argc, char * argv[])
+int main(int argc, char* argv[])
 {
     FILE_PATH = argv[0];
 
     core::App app;
     app.init();
 
-    auto window = app.createWindow(800, 600, "Back2Back");
+    const int width = 728;
+    const int height = 546;
+
+    auto window = app.createWindow(width, height, "Back2Back");
     window->setIcon("resources/app_icon.png");
 
-    auto scene = new core::Scene();
+    auto scene = new core::Scene(width, height);
     app.setScene(scene);
 
     app.run();

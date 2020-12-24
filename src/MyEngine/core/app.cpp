@@ -62,7 +62,7 @@ void App::run()
         glClear(GL_COLOR_BUFFER_BIT);
 
         if (scene_) {
-            scene_->update(currentTime, delta, currentWindow_->ratio);
+            scene_->update(currentTime, delta);
         }
 
         currentWindow_->swapBuffer();
@@ -102,5 +102,10 @@ void App::onKey(Window* wnd, int key, int scancode, int action, int mods)
 
     if (scene_!=nullptr)
         scene_->onKey(key, scancode, action, mods);
+}
+
+void App::onResize(Window *wnd, int width, int height)
+{
+    scene_->updateSize(width, height);
 }
 }

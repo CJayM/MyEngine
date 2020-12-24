@@ -32,6 +32,7 @@ protected:
     // IApp interface
 public:
     void onKey(Window* wnd, int key, int scancode, int action, int mods);
+    void onResize(Window *wnd, int width, int height);
 };
 }
 #endif // CORE_APP_H

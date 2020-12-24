@@ -32,10 +32,11 @@ Matrix Matrix::rotateZ(float angle)
     return *this * result;
 }
 
-Matrix Matrix::translate(float x, float y)
+Matrix Matrix::translate(float x, float y, float z)
 {
     data[3][0] = x;
     data[3][1] = y;
+    data[3][2] = z;
     return *this;
 }
 

@@ -5,31 +5,41 @@
 
 #include "core/shader.h"
 #include "core/texture.h"
+#include "core/models/plane.h"
 
 namespace core {
 
-Scene::Scene()
+Scene::Scene(float pWidth, float pHeight)
+    :width_(pWidth)
+    ,height_(pHeight)
+    , ratio_(width_/height_)
 {
     material = std::make_shared<Material>(
         std::make_shared<Shader>("resources\\shaders\\default.vert",
             "resources\\shaders\\default.frag"),
         std::make_shared<Texture>("resources\\images\\720_icylake.jpg"));
 
-    mesh = std::make_shared<Mesh>();
+    mesh = std::make_shared<models::Plane>(width_, height_);
+    mesh->initGeometry();
+    camera_.reset(new Camera());
+    updateSize(width_, height_);
 }
 
 Scene::~Scene()
 {
 }
 
-void Scene::update(float current, float delta, float ratio)
-{
-    camera_.setRatio(ratio);
-
-    float pulseColor = sin(current) / 2.0f + 0.5f;
-    material->use(&camera_);
+void Scene::update(float current, float delta)
+{    
+    float pulseColor = sin(current) / 2.0f + 0.5f;    
+    material->use(camera_.get());
     material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
     mesh->draw();
+}
+
+void Scene::updateSize(float width, float height)
+{
+    camera_->setViewSize(width, height, ratio_);
 }
 
 void Scene::onKey(int key, int scancode, int action, int mods)
@@ -38,17 +48,17 @@ void Scene::onKey(int key, int scancode, int action, int mods)
     fflush(stdout);
 
     if (key == KeyConstats::ARROW_LEFT)
-        camera_.left(0.025);
+        camera_->left(1);
     if (key == KeyConstats::ARROW_UP)
-        camera_.up(0.025);
+        camera_->up(1);
     if (key == KeyConstats::ARROW_RIGHT)
-        camera_.right(0.025);
+        camera_->right(1);
     if (key == KeyConstats::ARROW_DOWN)
-        camera_.down(0.025);
+        camera_->down(1);
 
     if (key == KeyConstats::NUM_MINUS)
-        camera_.zoomIn(0.025);
+        camera_->scaleUp(0.05);
     if (key == KeyConstats::NUM_PLUS)
-        camera_.zoomOut(0.025);
+        camera_->scaleDown(0.05);
 }
 }

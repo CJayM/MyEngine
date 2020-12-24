@@ -11,7 +11,7 @@ public:
     IApp();
     virtual ~IApp();
 
-    virtual void onResize(Window* wnd, int width, int height);
+    virtual void onResize(Window* wnd, int width, int height) = 0;
     virtual void onKey(Window* wnd, int key, int scancode, int action, int mods) = 0;
 };
 

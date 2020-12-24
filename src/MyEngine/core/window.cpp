@@ -11,6 +11,7 @@ void resize_callback(GLFWwindow* window, int width, int height)
         wnd->onResize(width, height);
         if (wnd->app_)
             wnd->app_->onResize(wnd, width, height);
+
     }
 }
 
