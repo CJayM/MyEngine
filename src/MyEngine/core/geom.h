@@ -10,8 +10,10 @@ struct Coord2D {
     Coord2D(float x, float y);
     Coord2D(const Coord2D& other);
 
-    Coord2D operator+(const Coord2D& other);
-    Coord2D operator-(const Coord2D& other);
+    Coord2D operator+(const Coord2D& other) const;
+    Coord2D operator-(const Coord2D& other) const;
+    Coord2D operator*(float value) const;
+    Coord2D operator*(const Coord2D& value) const;
 };
 
 struct Coord3D{
