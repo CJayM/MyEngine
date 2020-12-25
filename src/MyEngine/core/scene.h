@@ -20,6 +20,7 @@ public:
     virtual void onKey(int key, int scancode, int action, int mods);
     virtual void onMouseMove(const Coord2D& pos);
     virtual void onMouseClick(int key, int action, int mods);
+    virtual void onMouseScroll(float scrollX, float scrollY);
 
 protected:
     std::shared_ptr<Camera> camera_ = nullptr;

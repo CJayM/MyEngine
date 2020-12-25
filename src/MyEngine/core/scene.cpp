@@ -88,4 +88,12 @@ void Scene::onMouseClick(int key, int action, int mods)
         }
     }
 }
+
+void Scene::onMouseScroll(float scrollX, float scrollY)
+{
+    if (scrollY > 0)
+        camera_->scaleUp(0.1);
+    if (scrollY < 0)
+        camera_->scaleDown(0.1);
+}
 }

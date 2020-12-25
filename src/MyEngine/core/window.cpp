@@ -44,6 +44,15 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     }
 }
 
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    auto wnd = reinterpret_cast<core::Window*>(glfwGetWindowUserPointer(window));
+    if (wnd) {
+        if (wnd->app_)
+            wnd->app_->onMouseScroll(wnd, xoffset, yoffset);
+    }
+}
+
 
 
 Window::Window(const Size& pSize, std::string pTitle)
@@ -59,6 +68,7 @@ Window::Window(const Size& pSize, std::string pTitle)
     glfwSetKeyCallback(window_, key_callback);
     glfwSetCursorPosCallback(window_, cursor_position_callback);
     glfwSetMouseButtonCallback(window_, mouse_button_callback);
+    glfwSetScrollCallback(window_, scroll_callback);
     glfwSetFramebufferSizeCallback(window_, resize_callback);
 
     glfwMakeContextCurrent(window_);

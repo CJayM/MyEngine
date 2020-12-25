@@ -35,6 +35,7 @@ public:
     void onResize(Window *wnd, const Size& size);
     void onMouseMove(Window *wnd, const Coord2D& pos);
     void onMouseClick(Window *wnd, int key, int action, int mods);
+    void onMouseScroll(Window *wnd, float scrollX, float scrollY);
 };
 }
 #endif // CORE_APP_H

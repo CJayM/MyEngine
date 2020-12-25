@@ -17,6 +17,7 @@ public:
     virtual void onKey(Window* wnd, int key, int scancode, int action, int mods) = 0;
     virtual void onMouseMove(Window* wnd, const Coord2D& pos) = 0;
     virtual void onMouseClick(Window* wnd, int key, int action, int mods) = 0;
+    virtual void onMouseScroll(Window* wnd, float scrollX, float scrollY) = 0;
 };
 
 }

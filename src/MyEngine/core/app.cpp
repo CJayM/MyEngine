@@ -124,4 +124,10 @@ void App::onMouseClick(Window* wnd, int key, int action, int mods)
     if (scene_ != nullptr)
         scene_->onMouseClick(key, action, mods);
 }
+
+void App::onMouseScroll(Window *wnd, float scrollX, float scrollY)
+{
+    if (scene_ != nullptr)
+        scene_->onMouseScroll(scrollX, scrollY);
+}
 }
