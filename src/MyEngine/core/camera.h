@@ -8,13 +8,13 @@ namespace core {
 
 class Camera {
 public:
-    Camera();
+    Camera(float sceneWidth, float sceneHeight);
 
     void update(double mouseX, double mouseY);
 
     void setPos(float x, float y);
     void setAngle(float angle);
-    void setViewSize(float width, float height);
+    void seWindowSize(float width, float height);
 
     void up(float step);
     void down(float step);
@@ -28,6 +28,10 @@ public:
     void endDrag(double x, double y);
 
     Matrix getMatrix();
+    Matrix matrix_;
+    Matrix model_;
+    Matrix projection_;
+
 protected:
     Coord2D pos_ = { 0, 0 };
     Coord2D oldPos_;
@@ -36,15 +40,22 @@ protected:
     float height = 100;
     float angle_ = 0;
 
-    Matrix model_;
-    Matrix perspective_;
-    Matrix matrix_;
+
 
     float ratio_ = 1.0;
     bool isMatrixDirty_ = true;
 
     bool isDragged_ = false;
     Coord2D dragStart_;
+
+    float windowWidth_;
+    float windowHeight_;
+
+    float sceneWidth_;
+    float sceneHeight_;
+
+    float viewWidth_;
+    float viewHeight_;
 
     void updateMatrix();
 };

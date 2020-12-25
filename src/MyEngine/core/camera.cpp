@@ -2,21 +2,23 @@
 
 namespace core {
 
-Camera::Camera()
+Camera::Camera(float sceneWidth, float sceneHeight)
+    : sceneWidth_(sceneWidth)
+    , sceneHeight_(sceneHeight)
 {
 }
 
 void Camera::update(double mouseX, double mouseY)
 {
 
-    if (isDragged_){
-        auto delta = Coord2D(mouseX, mouseY) - dragStart_;
-        pos_.x = oldPos_.x + delta.x ;
-        pos_.y = oldPos_.y - delta.y /      ratio_;
+    if (isDragged_) {
+        auto screenPos = Coord2D(mouseX, mouseY);
+        //        screenPos = (matrix_ * screenPos);
+        auto delta = screenPos - dragStart_;
+        //        delta = matrix_ * delta;
+        pos_.x = oldPos_.x + delta.x;
+        pos_.y = oldPos_.y - delta.y / ratio_;
         isMatrixDirty_ = true;
-//        fprintf(stdout, "Drag: %fx%f\n", mouseX, mouseY);
-        fprintf(stdout, "Drag: %fx%f\n", delta.x, delta.y);
-        fflush(stdout);
     }
 }
 
@@ -27,9 +29,9 @@ void Camera::updateMatrix()
 
     model_.identity();
     model_ = model_.translate(pos_.x, pos_.y, 0);
-    model_ = model_.scale(scale_, scale_);
     model_ = model_.rotateZ(angle_);
-    matrix_ = perspective_ * model_;
+    model_ = model_.scale(scale_, scale_);
+    matrix_ = projection_ * model_;
 
     isMatrixDirty_ = false;
 }
@@ -54,11 +56,24 @@ void Camera::setAngle(float angle)
     angle_ = angle;
 }
 
-void Camera::setViewSize(float width, float height)
+void Camera::seWindowSize(float pWidth, float pHeight)
 {
-    float halfW = width * 0.5 ;
-    float halfH = height * 0.5;
-    perspective_ = Matrix::ortho(-halfW, halfW, -halfH, halfH, -100, 100);
+    windowWidth_ = pWidth;
+    windowHeight_ = pHeight;
+
+    auto newRatio_ = windowWidth_ / windowHeight_;
+    float ratio = sceneWidth_ / sceneHeight_;
+    if (newRatio_ < ratio) {
+        viewWidth_ = windowWidth_ * sceneHeight_ / windowHeight_;
+        viewHeight_ = sceneHeight_;
+    } else {
+        viewWidth_ = sceneWidth_;
+        viewHeight_ = windowHeight_ * sceneWidth_ / windowWidth_;
+    }
+    //------------
+    float halfW = viewWidth_ * 0.5;
+    float halfH = viewHeight_ * 0.5;
+    projection_ = Matrix::ortho(-halfW, halfW, -halfH, halfH, -100, 100);
     isMatrixDirty_ = true;
 }
 

@@ -28,7 +28,6 @@ protected:
 
     const float width_;
     const float height_;    
-    const float ratio_;    
     double mouseX_;
     double mouseY_;
 };

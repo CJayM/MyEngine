@@ -12,7 +12,6 @@ namespace core {
 Scene::Scene(float pWidth, float pHeight)
     : width_(pWidth)
     , height_(pHeight)
-    , ratio_(width_ / height_)
 {
     material = std::make_shared<Material>(
         std::make_shared<Shader>("resources\\shaders\\default.vert",
@@ -21,7 +20,7 @@ Scene::Scene(float pWidth, float pHeight)
 
     mesh = std::make_shared<models::Plane>(width_, height_);
     mesh->initGeometry();
-    camera_.reset(new Camera());
+    camera_.reset(new Camera(pWidth, pHeight));
     updateSize(width_, height_);
 }
 
@@ -38,19 +37,9 @@ void Scene::update(float current, float delta)
     material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
 }
 
-void Scene::updateSize(float width, float height)
+void Scene::updateSize(float pWidth, float pHeight)
 {
-    auto newRatio_ = width / height;
-    float newWidth, newHeight;
-    if (newRatio_ < ratio_) {
-        newWidth = width * height_ / height;
-        newHeight = height_;
-    } else {
-        newWidth = width_;
-        newHeight = height * width_/width;
-    }
-
-    camera_->setViewSize(newWidth, newHeight);
+    camera_->seWindowSize(pWidth, pHeight);
 }
 
 void Scene::draw()
