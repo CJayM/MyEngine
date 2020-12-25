@@ -97,6 +97,12 @@ void Camera::right(float step)
     isMatrixDirty_ = true;
 }
 
+void Camera::resetScale(float value)
+{
+    scale_ = value;
+    isMatrixDirty_ = true;
+}
+
 void Camera::scaleUp(float step)
 {
     scale_ *= (1 + step);

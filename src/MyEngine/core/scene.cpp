@@ -80,11 +80,17 @@ void Scene::onMouseClick(int key, int action, int mods)
 {
     fprintf(stdout, "Mouse: %d \t %d \t%d\n", key, action, mods);
     fflush(stdout);
-    if (key == 0) {
-        if (action == 1) {
+    if (key == KeyConstats::MOUSE_LEFT) {
+        if (action == KeyConstats::PRESS_DOWN) {
             camera_->startDrag(mousePos_);
         } else {
             camera_->endDrag(mousePos_);
+        }
+    }
+
+    if (key == KeyConstats::MOUSE_MIDDLE) {
+        if (action == KeyConstats::PRESS_DOWN) {
+            camera_->resetScale(1.0);
         }
     }
 }

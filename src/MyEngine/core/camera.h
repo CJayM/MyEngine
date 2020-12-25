@@ -21,6 +21,7 @@ public:
     void left(float step);
     void right(float step);
 
+    void resetScale(float value);
     void scaleUp(float step);
     void scaleDown(float step);
 
