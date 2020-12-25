@@ -6,19 +6,17 @@
 namespace core {
 namespace models {
 
-class Plane: public Mesh{
-public:
-    Plane(float width, float height);
-    virtual ~Plane();
+    class Plane : public Mesh {
+    public:
+        Plane(const Size& size);
+        virtual ~Plane();
 
-    float width;
-    float height;
+        Size size;
 
-    // Mesh interface
-protected:
-    std::pair<std::vector<Vertex3D>, std::vector<GLuint> > makeGeometry();
-};
-
+        // Mesh interface
+    protected:
+        std::pair<std::vector<Vertex3D>, std::vector<GLuint>> makeGeometry();
+    };
 }
 }
 

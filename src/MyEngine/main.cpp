@@ -10,13 +10,11 @@ int main(int argc, char* argv[])
     core::App app;
     app.init();
 
-    const int width = 728;
-    const int height = 546;
-
-    auto window = app.createWindow(width, height, "Back2Back");
+    const core::Size size(728, 546);
+    auto window = app.createWindow(size, "Back2Back");
     window->setIcon("resources/app_icon.png");
 
-    auto scene = new core::Scene(width, height);
+    auto scene = new core::Scene(size);
     app.setScene(scene);
 
     app.run();

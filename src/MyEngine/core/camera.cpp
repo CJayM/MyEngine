@@ -2,17 +2,16 @@
 
 namespace core {
 
-Camera::Camera(float sceneWidth, float sceneHeight)
-    : sceneWidth_(sceneWidth)
-    , sceneHeight_(sceneHeight)
+Camera::Camera(const Size& size)
+    : sceneSize_(size)
 {
 }
 
-void Camera::update(double mouseX, double mouseY)
+void Camera::update(const Coord2D& mousePos)
 {
 
     if (isDragged_) {
-        auto screenPos = window2screen(Coord2D(mouseX, mouseY));
+        auto screenPos = window2screen(mousePos);
         auto delta = screenPos - dragStart_;
         pos_.x = oldPos_.x + delta.x;
         pos_.y = oldPos_.y - delta.y / ratio_;
@@ -54,19 +53,18 @@ void Camera::setAngle(float angle)
     angle_ = angle;
 }
 
-void Camera::seWindowSize(float pWidth, float pHeight)
+void Camera::seWindowSize(const Size& pSize)
 {
-    windowWidth_ = pWidth;
-    windowHeight_ = pHeight;
+    windowSize_ = pSize;
 
-    auto newRatio_ = windowWidth_ / windowHeight_;
-    float ratio = sceneWidth_ / sceneHeight_;
+    auto newRatio_ = windowSize_.getRatio();
+    float ratio = sceneSize_.getRatio();
     if (newRatio_ < ratio) {
-        viewWidth_ = windowWidth_ * sceneHeight_ / windowHeight_;
-        viewHeight_ = sceneHeight_;
+        viewWidth_ = windowSize_.width * sceneSize_.height/ windowSize_.height;
+        viewHeight_ = sceneSize_.height;
     } else {
-        viewWidth_ = sceneWidth_;
-        viewHeight_ = windowHeight_ * sceneWidth_ / windowWidth_;
+        viewWidth_ = sceneSize_.width;
+        viewHeight_ = windowSize_.height * sceneSize_.width / windowSize_.width;
     }
     //------------
     float halfW = viewWidth_ * 0.5;
@@ -120,19 +118,19 @@ void Camera::scaleDown(float step)
 Coord2D Camera::window2screen(const Coord2D& pos)
 {
     Coord2D result = pos;
-    result.x *= viewWidth_ / windowWidth_;
-    result.y *= viewHeight_ / windowHeight_;
+    result.x *= viewWidth_ / windowSize_.width;
+    result.y *= viewHeight_ / windowSize_.height;
     return result;
 }
 
-void Camera::startDrag(double x, double y)
+void Camera::startDrag(const Coord2D& mousePos)
 {
-    dragStart_ = window2screen(Coord2D(x, y));
+    dragStart_ = window2screen(mousePos);
     oldPos_ = pos_;
     isDragged_ = true;
 }
 
-void Camera::endDrag(double x, double y)
+void Camera::endDrag(const Coord2D& mousePos)
 {
     isDragged_ = false;
 }

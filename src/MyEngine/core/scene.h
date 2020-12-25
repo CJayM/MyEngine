@@ -10,15 +10,15 @@ namespace core {
 class Scene
 {
 public:
-    Scene(float width, float height);
+    Scene(const Size& size);
     virtual ~Scene();
     void update(float current, float delta);
-    void updateSize(float width, float height);
+    void updateSize(const Size& size);
 
     void draw();
 
     virtual void onKey(int key, int scancode, int action, int mods);
-    virtual void onMouseMove(double xPos, double yPos);
+    virtual void onMouseMove(const Coord2D& pos);
     virtual void onMouseClick(int key, int action, int mods);
 
 protected:
@@ -26,10 +26,8 @@ protected:
     std::shared_ptr<Material> material = nullptr;
     std::shared_ptr<Mesh> mesh;
 
-    const float width_;
-    const float height_;    
-    double mouseX_;
-    double mouseY_;
+    const Size size_;
+    Coord2D mousePos_;
 };
 
 }

@@ -8,9 +8,10 @@ void resize_callback(GLFWwindow* window, int width, int height)
 {
     auto wnd = reinterpret_cast<core::Window*>(glfwGetWindowUserPointer(window));
     if (wnd) {
-        wnd->onResize(width, height);
+        Size size(width, height);
+        wnd->onResize(size);
         if (wnd->app_)
-            wnd->app_->onResize(wnd, width, height);
+            wnd->app_->onResize(wnd, size);
 
     }
 }
@@ -29,7 +30,7 @@ void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
     auto wnd = reinterpret_cast<core::Window*>(glfwGetWindowUserPointer(window));
     if (wnd) {
         if (wnd->app_)
-            wnd->app_->onMouseMove(wnd, xpos, ypos);
+            wnd->app_->onMouseMove(wnd, Coord2D(xpos, ypos));
     }
 }
 
@@ -45,9 +46,10 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 
 
 
-Window::Window(int width, int height, std::string pTitle)
+Window::Window(const Size& pSize, std::string pTitle)
+    :size(pSize)
 {
-    window_ = glfwCreateWindow(width, height, pTitle.c_str(), nullptr, nullptr);
+    window_ = glfwCreateWindow(size.width, size.height, pTitle.c_str(), nullptr, nullptr);
     if (window_ == nullptr) {
         exit(EXIT_FAILURE);
     }
@@ -64,7 +66,7 @@ Window::Window(int width, int height, std::string pTitle)
 
     int w, h;
     glfwGetFramebufferSize(window_, &w, &h);
-    onResize(w, h);
+    onResize(size);
 }
 
 void Window::setApp(IApp* pApp)
@@ -102,14 +104,15 @@ bool Window::isClosed() const
 
 void Window::update()
 {
-    glfwGetCursorPos(window_, &cursorX, &cursorY);
+    double x, y;
+    glfwGetCursorPos(window_, &x, &y);
+    cursorPos.x = x;
+    cursorPos.y = y;
 }
 
-void Window::onResize(int pWidth, int pHeight)
+void Window::onResize(const Size& pSize)
 {
-    width = pWidth;
-    height = pHeight;
-
-    ratio = width / float(height);
+    size = pSize;
+    ratio = size.width / size.height;
 }
 }

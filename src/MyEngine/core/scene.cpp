@@ -9,19 +9,18 @@
 
 namespace core {
 
-Scene::Scene(float pWidth, float pHeight)
-    : width_(pWidth)
-    , height_(pHeight)
+Scene::Scene(const Size& size)
+    : size_(size)
 {
     material = std::make_shared<Material>(
         std::make_shared<Shader>("resources\\shaders\\default.vert",
             "resources\\shaders\\default.frag"),
         std::make_shared<Texture>("resources\\images\\720_icylake.jpg"));
 
-    mesh = std::make_shared<models::Plane>(width_, height_);
+    mesh = std::make_shared<models::Plane>(size_);
     mesh->initGeometry();
-    camera_.reset(new Camera(pWidth, pHeight));
-    updateSize(width_, height_);
+    camera_.reset(new Camera(size));
+    updateSize(size_);
 }
 
 Scene::~Scene()
@@ -30,16 +29,16 @@ Scene::~Scene()
 
 void Scene::update(float current, float delta)
 {
-    camera_->update(mouseX_, mouseY_);
+    camera_->update(mousePos_);
 
     float pulseColor = sin(current) / 2.0f + 0.5f;
     material->use(camera_.get());
     material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
 }
 
-void Scene::updateSize(float pWidth, float pHeight)
+void Scene::updateSize(const Size& size)
 {
-    camera_->seWindowSize(pWidth, pHeight);
+    camera_->seWindowSize(size);
 }
 
 void Scene::draw()
@@ -72,10 +71,9 @@ void Scene::onKey(int key, int scancode, int action, int mods)
     }
 }
 
-void Scene::onMouseMove(double xPos, double yPos)
+void Scene::onMouseMove(const Coord2D& pos)
 {
-    mouseX_ = xPos;
-    mouseY_ = yPos;
+    mousePos_ = pos;
 }
 
 void Scene::onMouseClick(int key, int action, int mods)
@@ -84,9 +82,9 @@ void Scene::onMouseClick(int key, int action, int mods)
     fflush(stdout);
     if (key == 0) {
         if (action == 1) {
-            camera_->startDrag(mouseX_, mouseY_);
+            camera_->startDrag(mousePos_);
         } else {
-            camera_->endDrag(mouseX_, mouseY_);
+            camera_->endDrag(mousePos_);
         }
     }
 }

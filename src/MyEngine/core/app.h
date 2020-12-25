@@ -18,7 +18,7 @@ public:
     virtual ~App();
     void init();
     void run();
-    std::shared_ptr<Window> createWindow(int width, int height, std::string title);
+    std::shared_ptr<Window> createWindow(const Size& size, std::string title);
     void setScene(Scene* scene);
 
 protected:
@@ -32,8 +32,8 @@ protected:
     // IApp interface
 public:
     void onKey(Window* wnd, int key, int scancode, int action, int mods);
-    void onResize(Window *wnd, int width, int height);   
-    void onMouseMove(Window *wnd, double xPos, double yPos);
+    void onResize(Window *wnd, const Size& size);
+    void onMouseMove(Window *wnd, const Coord2D& pos);
     void onMouseClick(Window *wnd, int key, int action, int mods);
 };
 }

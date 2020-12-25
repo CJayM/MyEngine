@@ -16,6 +16,17 @@ struct Coord2D {
     Coord2D operator*(const Coord2D& value) const;
 };
 
+struct Size{
+    Size();
+    Size(float width, float height);
+    Size(const Size& other);
+    float width;
+    float height;
+
+
+    float getRatio() const;
+};
+
 struct Coord3D{
     float x, y, z;
 };

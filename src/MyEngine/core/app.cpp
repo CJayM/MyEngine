@@ -58,12 +58,12 @@ void App::run()
         currentWindow_->update();
 
         if (scene_) {
-            scene_->onMouseMove(currentWindow_->cursorX, currentWindow_->cursorY);
+            scene_->onMouseMove(currentWindow_->cursorPos);
             scene_->update(currentTime, delta);
         }
 
         // draw
-        glViewport(0, 0, currentWindow_->width, currentWindow_->height);
+        glViewport(0, 0, currentWindow_->size.width, currentWindow_->size.height);
 
         if (scene_) {
             scene_->draw();
@@ -77,9 +77,9 @@ void App::run()
     exit(EXIT_SUCCESS);
 }
 
-std::shared_ptr<Window> App::createWindow(int width, int height, std::string title)
+std::shared_ptr<Window> App::createWindow(const Size& pSize, std::string title)
 {
-    auto result = std::make_shared<Window>(width, height, title);
+    auto result = std::make_shared<Window>(pSize, title);
 
     // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
     glewExperimental = GL_TRUE;
@@ -108,12 +108,12 @@ void App::onKey(Window* wnd, int key, int scancode, int action, int mods)
         scene_->onKey(key, scancode, action, mods);
 }
 
-void App::onResize(Window* wnd, int width, int height)
+void App::onResize(Window* wnd, const Size& size)
 {
-    scene_->updateSize(width, height);
+    scene_->updateSize(size);
 }
 
-void App::onMouseMove(Window* wnd, double xPos, double yPos)
+void App::onMouseMove(Window* wnd, const Coord2D& coord)
 {
     //    if (scene_ != nullptr)
     //        scene_->onMouseMove(xPos, yPos);

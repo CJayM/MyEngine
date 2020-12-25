@@ -6,6 +6,8 @@
 #include "core/gl_headers.h"
 #include "core/iapp.h"
 
+#include "geom.h"
+
 namespace core {
 
 void resize_callback(GLFWwindow* window, int width, int height);
@@ -19,7 +21,7 @@ class Window {
     friend void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
     friend void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
 public:
-    Window(int width, int height, std::string title);
+    Window(const Size& size, std::string title);
     ~Window();
 
     void setApp(IApp* app);
@@ -31,13 +33,12 @@ public:
     bool isClosed() const;
     void update();
 
-    void onResize(int width, int height);
+    void onResize(const Size& size);
 
-    int width;
-    int height;
+    Size size;
     float ratio;
-    double cursorX;
-    double cursorY;
+
+    Coord2D cursorPos;
 
 private:
     GLFWwindow* window_ = nullptr;    
