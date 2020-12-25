@@ -12,10 +12,8 @@ void Camera::update(double mouseX, double mouseY)
 {
 
     if (isDragged_) {
-        auto screenPos = Coord2D(mouseX, mouseY);
-        //        screenPos = (matrix_ * screenPos);
+        auto screenPos = window2screen(Coord2D(mouseX, mouseY));
         auto delta = screenPos - dragStart_;
-        //        delta = matrix_ * delta;
         pos_.x = oldPos_.x + delta.x;
         pos_.y = oldPos_.y - delta.y / ratio_;
         isMatrixDirty_ = true;
@@ -119,16 +117,18 @@ void Camera::scaleDown(float step)
     fflush(stdout);
 }
 
+Coord2D Camera::window2screen(const Coord2D& pos)
+{
+    Coord2D result = pos;
+    result.x *= viewWidth_ / windowWidth_;
+    result.y *= viewHeight_ / windowHeight_;
+    return result;
+}
+
 void Camera::startDrag(double x, double y)
 {
-    dragStart_.x = x;
-    dragStart_.y = y;
-
-    fprintf(stdout, "Drag START: %fx%f\n", x, y);
-    fflush(stdout);
-
+    dragStart_ = window2screen(Coord2D(x, y));
     oldPos_ = pos_;
-
     isDragged_ = true;
 }
 

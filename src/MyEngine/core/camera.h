@@ -24,6 +24,7 @@ public:
     void scaleUp(float step);
     void scaleDown(float step);
 
+    Coord2D window2screen(const Coord2D& pos);
     void startDrag(double x, double y);
     void endDrag(double x, double y);
 
