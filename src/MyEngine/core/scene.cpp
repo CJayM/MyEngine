@@ -15,7 +15,8 @@ Scene::Scene(const Size& size)
     material = std::make_shared<Material>(
         std::make_shared<Shader>("resources\\shaders\\default.vert",
             "resources\\shaders\\default.frag"),
-        std::make_shared<Texture>("resources\\images\\720_icylake.jpg"));
+        std::make_shared<Texture>());
+    material->texture->loadFromFile("resources\\images\\720_icylake.jpg");
 
     spriteMaterial = std::make_shared<Material>(
         std::make_shared<Shader>("resources\\shaders\\sprite.vert",
@@ -32,7 +33,8 @@ Scene::Scene(const Size& size)
     soldier_.initGeometry();
     soldier_.addAnimation("salute", salutAnimation);
 
-    auto droneTexture = std::make_shared<Texture>("resources\\sprites\\drone.png");
+    auto droneTexture = std::make_shared<Texture>();
+    droneTexture->loadFromFile("resources\\sprites\\drone.png");
     drone_ = core::sprites::makeSprite(droneTexture);
 }
 

@@ -7,9 +7,10 @@ namespace core {
 
 class ITransformable {
 public:
-    ITransformable();
-
+    ITransformable() = default;
+    virtual ~ITransformable();
     void setPosition(const Coord2D& pos);
+    const Coord2D& getPosition() const;
     Coord2D& getPosition();
 
 protected:

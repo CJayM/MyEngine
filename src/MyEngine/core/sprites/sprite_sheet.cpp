@@ -15,12 +15,12 @@ namespace sprites {
     {
     }
 
-    void SpriteSheet::addAnimation(std::string name, SpriteAnimation &animation)
+    void SpriteSheet::addAnimation(std::string name, SpriteAnimation& animation)
     {
         animations_[name] = animation;
     }
 
-    std::pair<std::vector<Vertex3D>, std::vector<GLuint> > SpriteSheet::makeGeometry()
+    std::pair<std::vector<Vertex3D>, std::vector<GLuint>> SpriteSheet::makeGeometry()
     {
         std::vector<Vertex3D> points = {
             { { 100.0, 100.0, 0.0f }, { 1.0f, 0.0f, 0.0f }, { 1.0f, 1.0f } },
@@ -39,7 +39,8 @@ namespace sprites {
     SpriteAnimation::SpriteAnimation()
     {
         Sequence salute;
-        salute.texture_ = new core::Texture("resources\\spritesheets\\units\\cosmo_artillery_br.png");
+        salute.texture_ = new core::Texture();
+        salute.texture_->loadFromFile("resources\\spritesheets\\units\\cosmo_artillery_br.png");
         salute.name = "salute";
         salute.frames = {
             { 76, 68, 298, 326, 100, 73, 260, 260 },

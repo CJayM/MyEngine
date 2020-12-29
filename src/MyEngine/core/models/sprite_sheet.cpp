@@ -39,7 +39,8 @@ namespace sprites {
     SpriteAnimation::SpriteAnimation()
     {
         Sequence salute;
-        salute.texture_ = new core::Texture("resources\\spritesheets\\units\\cosmo_artillery_br.png");
+        salute.texture_ = new core::Texture();
+        salute.texture_->loadFromFile("resources\\spritesheets\\units\\cosmo_artillery_br.png");
         salute.name = "salute";
         salute.frames = {
             { 76, 68, 298, 326, 100, 73, 260, 260 },

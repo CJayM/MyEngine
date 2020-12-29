@@ -11,11 +11,15 @@ namespace core {
 
 class Texture {
 public:
-    Texture(const std::string& filePath, bool useAlpha = true);
+    Texture();
     GLuint id;
+    bool loadFromFile(const std::string& filePath, bool useAlpha = true);
 
-    const std::string path;
     core::Size size;
+
+private:
+    std::string path_;
+    bool useAlpha_ = false;
 
 };
 

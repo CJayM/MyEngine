@@ -9,6 +9,9 @@ namespace core {
 class IDrawable
 {
 public:
+    IDrawable() = default;
+    virtual ~IDrawable();
+
     virtual void draw(const Camera& camera) = 0;
 };
 

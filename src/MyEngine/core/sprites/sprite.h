@@ -3,12 +3,14 @@
 
 #include <memory>
 
+#include <core/itransformable.h>
+
 #include "core/mesh.h"
 #include "core/texture.h"
 
 namespace core {
 namespace sprites {
-    class Sprite: IDrawable {
+    class Sprite: public IDrawable, public ITransformable {
     public:
         Sprite(std::shared_ptr<Texture> texture);
         virtual ~Sprite();

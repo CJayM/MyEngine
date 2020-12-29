@@ -2,5 +2,9 @@
 
 namespace core{
 
+IDrawable::~IDrawable()
+{
+}
+
 
 }

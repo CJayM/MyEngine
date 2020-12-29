@@ -7,13 +7,18 @@
 
 namespace core {
 
-Texture::Texture(const std::string& filePath, bool useAlpha)
-    : path(filePath)
+Texture::Texture()
 {
-    glGenTextures(1, &id);
+    glGenTextures(1, &id);    
+}
+
+bool Texture::loadFromFile(const std::string &filePath, bool useAlpha)
+{
+    path_ = filePath;
+    useAlpha_ = useAlpha;
+
     glBindTexture(GL_TEXTURE_2D, id);
     {
-
         // Set our texture parameters
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT); // Set texture wrapping to GL_REPEAT
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
