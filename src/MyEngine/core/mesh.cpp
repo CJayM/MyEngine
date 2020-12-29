@@ -1,4 +1,5 @@
 #include "mesh.h"
+#include <assert.h>
 
 namespace core {
 
@@ -44,13 +45,23 @@ void Mesh::initGeometry()
         glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed, the call to glVertexAttribPointer registered VBO as the currently bound vertex buffer object so afterwards we can safely unbind
     }
     glBindVertexArray(0); // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs), remember: do NOT unbind the EBO, keep it bound to this VAO
+
+    isInitialized_ = true;
 }
 
-void Mesh::draw()
+void Mesh::draw(const Camera& camera)
 {
+    assert(isInitialized_);
+    if (material_)
+        material_->use(camera);
     glBindVertexArray(id);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
+}
+
+void Mesh::setMaterial(std::shared_ptr<Material> mat)
+{
+    material_ = mat;
 }
 
 std::pair<std::vector<Vertex3D>, std::vector<GLuint>> Mesh::makeGeometry()

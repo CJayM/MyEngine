@@ -19,8 +19,13 @@ Scene::Scene(const Size& size)
 
     mesh = std::make_shared<models::Plane>(size_);
     mesh->initGeometry();
+    mesh->setMaterial(material);
     camera_.reset(new Camera(size));
     updateSize(size_);
+
+    core::sprites::SpriteAnimation salutAnimation;
+    soldier_.initGeometry();
+    soldier_.addAnimation("salute", salutAnimation);
 }
 
 Scene::~Scene()
@@ -32,7 +37,7 @@ void Scene::update(float current, float delta)
     camera_->update(mousePos_);
 
     float pulseColor = sin(current) / 2.0f + 0.5f;
-    material->use(camera_.get());
+
     material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
 }
 
@@ -46,7 +51,8 @@ void Scene::draw()
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    mesh->draw();
+    mesh->draw(*camera_.get());
+    soldier_.draw(*camera_.get());
 }
 
 void Scene::onKey(int key, int scancode, int action, int mods)

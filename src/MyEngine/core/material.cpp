@@ -8,10 +8,10 @@ Material::Material(std::shared_ptr<Shader> pShader, std::shared_ptr<Texture> pTe
 {
 }
 
-void Material::use(Camera* camera)
+void Material::use(const Camera& camera)
 {
     shader->use();
     shader->setTexture(texture->id);
-    shader->setMatrix(camera->getMatrix());
+    shader->setMatrix(const_cast<Camera*>(&camera)->getMatrix());
 }
 }

@@ -13,7 +13,7 @@ class Material {
 public:
     Material(std::shared_ptr<Shader> shader, std::shared_ptr<Texture> texture);
 
-    void use(Camera* camera);
+    void use(const Camera& camera);
 
     std::shared_ptr<Shader> shader = nullptr;
     std::shared_ptr<Texture> texture = nullptr;

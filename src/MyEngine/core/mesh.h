@@ -7,6 +7,8 @@
 #include "core/gl_headers.h"
 #include "core/geom.h"
 
+#include "core/material.h"
+
 namespace core {
 
 class Mesh {
@@ -15,14 +17,22 @@ public:
     virtual ~Mesh();
 
     void initGeometry();
-    void draw();
+    void draw(const Camera& camera);
+
+    void setMaterial(std::shared_ptr<Material> mat);
+
     GLuint id;
+
 
 protected:
     virtual std::pair<std::vector<Vertex3D>, std::vector<GLuint>> makeGeometry();
 
     GLuint vbo_;
     GLuint ibo_;
+
+    bool isInitialized_ = false;
+
+    std::shared_ptr<Material> material_;
 };
 }
 
