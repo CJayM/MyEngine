@@ -14,7 +14,7 @@ Mesh::~Mesh()
 {
     glDeleteVertexArrays(1, &id);
     glDeleteBuffers(1, &vbo_);
-    //    glDeleteBuffers(1, &ibo_);
+    glDeleteBuffers(1, &ibo_);
 }
 
 void Mesh::initGeometry()
@@ -52,8 +52,8 @@ void Mesh::initGeometry()
 void Mesh::draw(const Camera& camera)
 {
     assert(isInitialized_);
-    if (material_)
-        material_->use(camera);
+//    if (material_)
+//        material_->use(camera);
     glBindVertexArray(id);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);

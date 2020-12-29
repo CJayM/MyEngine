@@ -5,6 +5,7 @@
 #include "core/material.h"
 #include "core/mesh.h"
 #include <core/models/sprite_sheet.h>
+#include <core/sprites/sprite.h>
 
 namespace core {
 
@@ -26,9 +27,11 @@ public:
 protected:
     std::shared_ptr<Camera> camera_ = nullptr;
     std::shared_ptr<Material> material = nullptr;
+    std::shared_ptr<Material> spriteMaterial = nullptr;
     std::shared_ptr<Mesh> mesh;
 
     core::sprites::SpriteSheet soldier_;
+    std::shared_ptr<core::sprites::Sprite> drone_;
 
     const Size size_;
     Coord2D mousePos_;

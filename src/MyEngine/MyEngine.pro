@@ -22,6 +22,9 @@ shaders.path = $$DESTDIR/resources/shaders/
 images.files = $$files(resources/images/*)
 images.path = $$DESTDIR/resources/images/
 
+sprites.files = $$files(resources/sprites/*)
+sprites.path = $$DESTDIR/resources/sprites/
+
 spritesheets.files = $$files(resources/spritesheets/*)
 spritesheets.path = $$DESTDIR/resources/spritesheets/
 
@@ -32,7 +35,7 @@ deps.files = $$files(deps/*)
 deps.path = $$DESTDIR/
 
 COPIES += deps
-COPIES += reses shaders images spritesheets
+COPIES += reses shaders images sprites spritesheets
 
 INCLUDEPATH += ../../libs/glfw/include
 LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
@@ -52,6 +55,7 @@ SOURCES +=  main.cpp \
     core/matrices.cpp \
     core/mesh.cpp \
     core/models/plane.cpp \
+    core/sprites/sprite.cpp \
     core/models/sprite_sheet.cpp \
     core/scene.cpp \
     core/shader.cpp \
@@ -69,6 +73,7 @@ HEADERS += \
     core/matrices.h \
     core/mesh.h \
     core/models/plane.h \
+    core/sprites/sprite.h \
     core/models/sprite_sheet.h \
     core/scene.h \
     core/shader.h \
@@ -79,4 +84,6 @@ HEADERS += \
 
 DISTFILES += \
     resources/shaders/default.frag \
-    resources/shaders/default.vert
+    resources/shaders/default.vert \
+    resources/shaders/sprite.frag \
+    resources/shaders/sprite.vert

@@ -17,6 +17,11 @@ Scene::Scene(const Size& size)
             "resources\\shaders\\default.frag"),
         std::make_shared<Texture>("resources\\images\\720_icylake.jpg"));
 
+    spriteMaterial = std::make_shared<Material>(
+        std::make_shared<Shader>("resources\\shaders\\sprite.vert",
+            "resources\\shaders\\sprite.frag"),
+        nullptr);
+
     mesh = std::make_shared<models::Plane>(size_);
     mesh->initGeometry();
     mesh->setMaterial(material);
@@ -26,6 +31,9 @@ Scene::Scene(const Size& size)
     core::sprites::SpriteAnimation salutAnimation;
     soldier_.initGeometry();
     soldier_.addAnimation("salute", salutAnimation);
+
+    auto droneTexture = std::make_shared<Texture>("resources\\sprites\\drone.png");
+    drone_ = core::sprites::makeSprite(droneTexture);
 }
 
 Scene::~Scene()
@@ -35,9 +43,7 @@ Scene::~Scene()
 void Scene::update(float current, float delta)
 {
     camera_->update(mousePos_);
-
     float pulseColor = sin(current) / 2.0f + 0.5f;
-
     material->shader->setBaseColor({ 1 - pulseColor, pulseColor, pulseColor });
 }
 
@@ -51,8 +57,13 @@ void Scene::draw()
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    mesh->draw(*camera_.get());
-    soldier_.draw(*camera_.get());
+    auto cam = *camera_.get();
+    material->use(cam);
+    mesh->draw(cam);
+//        soldier_.draw(cam);
+    spriteMaterial->texture = drone_->texture_;
+    spriteMaterial->use(cam);
+    drone_->draw(cam);
 }
 
 void Scene::onKey(int key, int scancode, int action, int mods)
