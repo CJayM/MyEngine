@@ -60,7 +60,7 @@ void Scene::draw()
     auto cam = *camera_.get();
     material->use(cam);
     mesh->draw(cam);
-//        soldier_.draw(cam);
+    //        soldier_.draw(cam);
     spriteMaterial->texture = drone_->texture_;
     spriteMaterial->use(cam);
     drone_->draw(cam);

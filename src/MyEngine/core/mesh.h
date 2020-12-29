@@ -8,16 +8,17 @@
 #include "core/geom.h"
 
 #include "core/material.h"
+#include "core/idrawable.h"
 
 namespace core {
 
-class Mesh {
+class Mesh: IDrawable {
 public:
     Mesh();
     virtual ~Mesh();
 
     void initGeometry();
-    void draw(const Camera& camera);
+    void draw(const Camera& camera) override;
 
     void setMaterial(std::shared_ptr<Material> mat);
 

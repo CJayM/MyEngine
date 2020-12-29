@@ -8,13 +8,13 @@
 
 namespace core {
 namespace sprites {
-    class Sprite {
+    class Sprite: IDrawable {
     public:
         Sprite(std::shared_ptr<Texture> texture);
         virtual ~Sprite();
 
         void init();
-        void draw(const Camera& camera);
+        void draw(const Camera& camera) override;
 
         Size size;
         std::shared_ptr<Texture> texture_;

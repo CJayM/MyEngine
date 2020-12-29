@@ -19,6 +19,9 @@ Release:DESTDIR = $$OUT_PWD/release/bin
 shaders.files = $$files(resources/shaders/*)
 shaders.path = $$DESTDIR/resources/shaders/
 
+fonts.files = $$files(resources/fonts/*)
+fonts.path = $$DESTDIR/resources/fonts/
+
 images.files = $$files(resources/images/*)
 images.path = $$DESTDIR/resources/images/
 
@@ -35,7 +38,7 @@ deps.files = $$files(deps/*)
 deps.path = $$DESTDIR/
 
 COPIES += deps
-COPIES += reses shaders images sprites spritesheets
+COPIES += reses shaders images sprites spritesheets fonts
 
 INCLUDEPATH += ../../libs/glfw/include
 LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
@@ -51,6 +54,8 @@ SOURCES +=  main.cpp \
     core/app.cpp \
     core/camera.cpp \
     core/geom.cpp \
+    core/idrawable.cpp \
+    core/itransformable.cpp \
     core/material.cpp \
     core/matrices.cpp \
     core/mesh.cpp \
@@ -68,6 +73,8 @@ HEADERS += \
     core/camera.h \
     core/geom.h \
     core/gl_headers.h \
+    core/idrawable.h \
+    core/itransformable.h \
     core/key_constants.h \
     core/material.h \
     core/matrices.h \
