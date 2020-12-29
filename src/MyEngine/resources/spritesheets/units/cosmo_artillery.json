@@ -1,0 +1,3387 @@
+{
+	"frames": {
+		"bl/comso_arillery_salute_bl_00": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 248,
+				"y": 486
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_01": {
+			"frame": {
+				"h": 81,
+				"w": 50,
+				"x": 504,
+				"y": 376
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 50,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_02": {
+			"frame": {
+				"h": 81,
+				"w": 48,
+				"x": 188,
+				"y": 694
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 48,
+				"x": 101,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_03": {
+			"frame": {
+				"h": 80,
+				"w": 48,
+				"x": 82,
+				"y": 720
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 80,
+				"w": 48,
+				"x": 102,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_04": {
+			"frame": {
+				"h": 79,
+				"w": 48,
+				"x": 306,
+				"y": 712
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 48,
+				"x": 105,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_05": {
+			"frame": {
+				"h": 78,
+				"w": 46,
+				"x": 530,
+				"y": 653
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 46,
+				"x": 109,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_06": {
+			"frame": {
+				"h": 78,
+				"w": 46,
+				"x": 690,
+				"y": 481
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 46,
+				"x": 110,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_07": {
+			"frame": {
+				"h": 77,
+				"w": 46,
+				"x": 578,
+				"y": 653
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 46,
+				"x": 111,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_08": {
+			"frame": {
+				"h": 76,
+				"w": 46,
+				"x": 882,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 46,
+				"x": 111,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_09": {
+			"frame": {
+				"h": 76,
+				"w": 46,
+				"x": 442,
+				"y": 786
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 46,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_10": {
+			"frame": {
+				"h": 75,
+				"w": 46,
+				"x": 0,
+				"y": 929
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 46,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_11": {
+			"frame": {
+				"h": 75,
+				"w": 46,
+				"x": 248,
+				"y": 894
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 46,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_12": {
+			"frame": {
+				"h": 74,
+				"w": 48,
+				"x": 136,
+				"y": 861
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 48,
+				"x": 111,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_13": {
+			"frame": {
+				"h": 74,
+				"w": 48,
+				"x": 306,
+				"y": 793
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 48,
+				"x": 111,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_14": {
+			"frame": {
+				"h": 74,
+				"w": 48,
+				"x": 248,
+				"y": 818
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 48,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_15": {
+			"frame": {
+				"h": 74,
+				"w": 48,
+				"x": 850,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 48,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_16": {
+			"frame": {
+				"h": 74,
+				"w": 48,
+				"x": 0,
+				"y": 853
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 48,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_17": {
+			"frame": {
+				"h": 74,
+				"w": 48,
+				"x": 824,
+				"y": 254
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 48,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_18": {
+			"frame": {
+				"h": 74,
+				"w": 48,
+				"x": 642,
+				"y": 575
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 48,
+				"x": 111,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_19": {
+			"frame": {
+				"h": 75,
+				"w": 48,
+				"x": 832,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 48,
+				"x": 111,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_20": {
+			"frame": {
+				"h": 75,
+				"w": 46,
+				"x": 908,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 46,
+				"x": 112,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_21": {
+			"frame": {
+				"h": 76,
+				"w": 46,
+				"x": 742,
+				"y": 485
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 46,
+				"x": 111,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_22": {
+			"frame": {
+				"h": 75,
+				"w": 44,
+				"x": 626,
+				"y": 734
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 44,
+				"x": 112,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_23": {
+			"frame": {
+				"h": 76,
+				"w": 42,
+				"x": 442,
+				"y": 864
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 42,
+				"x": 112,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_24": {
+			"frame": {
+				"h": 77,
+				"w": 44,
+				"x": 742,
+				"y": 563
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 44,
+				"x": 109,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_25": {
+			"frame": {
+				"h": 78,
+				"w": 44,
+				"x": 930,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 44,
+				"x": 108,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_26": {
+			"frame": {
+				"h": 79,
+				"w": 46,
+				"x": 810,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 46,
+				"x": 105,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_27": {
+			"frame": {
+				"h": 79,
+				"w": 46,
+				"x": 762,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 46,
+				"x": 104,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_28": {
+			"frame": {
+				"h": 80,
+				"w": 48,
+				"x": 728,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 80,
+				"w": 48,
+				"x": 101,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_29": {
+			"frame": {
+				"h": 81,
+				"w": 50,
+				"x": 188,
+				"y": 611
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 50,
+				"x": 98,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/comso_arillery_salute_bl_30": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 82,
+				"y": 558
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_00": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 394,
+				"y": 405
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_01": {
+			"frame": {
+				"h": 83,
+				"w": 56,
+				"x": 462,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 56,
+				"x": 92,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_02": {
+			"frame": {
+				"h": 85,
+				"w": 62,
+				"x": 0,
+				"y": 249
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 85,
+				"w": 62,
+				"x": 85,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_03": {
+			"frame": {
+				"h": 84,
+				"w": 68,
+				"x": 168,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 84,
+				"w": 68,
+				"x": 78,
+				"y": 75
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_04": {
+			"frame": {
+				"h": 83,
+				"w": 72,
+				"x": 168,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 72,
+				"x": 73,
+				"y": 77
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_05": {
+			"frame": {
+				"h": 81,
+				"w": 74,
+				"x": 0,
+				"y": 166
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 74,
+				"x": 70,
+				"y": 80
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_06": {
+			"frame": {
+				"h": 83,
+				"w": 76,
+				"x": 82,
+				"y": 82
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 76,
+				"x": 68,
+				"y": 83
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_07": {
+			"frame": {
+				"h": 82,
+				"w": 80,
+				"x": 0,
+				"y": 82
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 80,
+				"x": 63,
+				"y": 87
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_08": {
+			"frame": {
+				"h": 80,
+				"w": 82,
+				"x": 0,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 80,
+				"w": 82,
+				"x": 59,
+				"y": 90
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_09": {
+			"frame": {
+				"h": 78,
+				"w": 82,
+				"x": 84,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 82,
+				"x": 57,
+				"y": 91
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_10": {
+			"frame": {
+				"h": 73,
+				"w": 80,
+				"x": 82,
+				"y": 167
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 73,
+				"w": 80,
+				"x": 58,
+				"y": 92
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_11": {
+			"frame": {
+				"h": 67,
+				"w": 74,
+				"x": 246,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 67,
+				"w": 74,
+				"x": 62,
+				"y": 94
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_12": {
+			"frame": {
+				"h": 62,
+				"w": 70,
+				"x": 306,
+				"y": 401
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 62,
+				"w": 70,
+				"x": 66,
+				"y": 97
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_13": {
+			"frame": {
+				"h": 59,
+				"w": 68,
+				"x": 658,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 59,
+				"w": 68,
+				"x": 68,
+				"y": 99
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_14": {
+			"frame": {
+				"h": 57,
+				"w": 66,
+				"x": 782,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 57,
+				"w": 66,
+				"x": 70,
+				"y": 99
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_15": {
+			"frame": {
+				"h": 57,
+				"w": 64,
+				"x": 758,
+				"y": 254
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 57,
+				"w": 64,
+				"x": 72,
+				"y": 99
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_16": {
+			"frame": {
+				"h": 58,
+				"w": 64,
+				"x": 0,
+				"y": 793
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 58,
+				"w": 64,
+				"x": 72,
+				"y": 98
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_17": {
+			"frame": {
+				"h": 58,
+				"w": 66,
+				"x": 742,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 58,
+				"w": 66,
+				"x": 70,
+				"y": 98
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_18": {
+			"frame": {
+				"h": 58,
+				"w": 66,
+				"x": 690,
+				"y": 254
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 58,
+				"w": 66,
+				"x": 70,
+				"y": 98
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_19": {
+			"frame": {
+				"h": 59,
+				"w": 66,
+				"x": 640,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 59,
+				"w": 66,
+				"x": 70,
+				"y": 97
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_20": {
+			"frame": {
+				"h": 60,
+				"w": 66,
+				"x": 622,
+				"y": 254
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 60,
+				"w": 66,
+				"x": 70,
+				"y": 96
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_21": {
+			"frame": {
+				"h": 60,
+				"w": 66,
+				"x": 394,
+				"y": 572
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 60,
+				"w": 66,
+				"x": 70,
+				"y": 96
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_22": {
+			"frame": {
+				"h": 61,
+				"w": 66,
+				"x": 0,
+				"y": 650
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 61,
+				"w": 66,
+				"x": 70,
+				"y": 95
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_23": {
+			"frame": {
+				"h": 60,
+				"w": 66,
+				"x": 674,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 60,
+				"w": 66,
+				"x": 70,
+				"y": 96
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_24": {
+			"frame": {
+				"h": 59,
+				"w": 66,
+				"x": 714,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 59,
+				"w": 66,
+				"x": 70,
+				"y": 99
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_25": {
+			"frame": {
+				"h": 58,
+				"w": 66,
+				"x": 462,
+				"y": 572
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 58,
+				"w": 66,
+				"x": 70,
+				"y": 102
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_26": {
+			"frame": {
+				"h": 61,
+				"w": 68,
+				"x": 548,
+				"y": 250
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 61,
+				"w": 68,
+				"x": 71,
+				"y": 102
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_27": {
+			"frame": {
+				"h": 63,
+				"w": 72,
+				"x": 392,
+				"y": 250
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 63,
+				"w": 72,
+				"x": 71,
+				"y": 102
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_28": {
+			"frame": {
+				"h": 57,
+				"w": 78,
+				"x": 456,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 57,
+				"w": 78,
+				"x": 67,
+				"y": 109
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_29": {
+			"frame": {
+				"h": 52,
+				"w": 82,
+				"x": 520,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 52,
+				"w": 82,
+				"x": 61,
+				"y": 115
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_30": {
+			"frame": {
+				"h": 51,
+				"w": 82,
+				"x": 136,
+				"y": 558
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 51,
+				"w": 82,
+				"x": 60,
+				"y": 116
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_31": {
+			"frame": {
+				"h": 53,
+				"w": 82,
+				"x": 494,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 53,
+				"w": 82,
+				"x": 59,
+				"y": 114
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_32": {
+			"frame": {
+				"h": 53,
+				"w": 80,
+				"x": 466,
+				"y": 250
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 53,
+				"w": 80,
+				"x": 60,
+				"y": 114
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_33": {
+			"frame": {
+				"h": 51,
+				"w": 82,
+				"x": 578,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 51,
+				"w": 82,
+				"x": 59,
+				"y": 116
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_34": {
+			"frame": {
+				"h": 51,
+				"w": 82,
+				"x": 504,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 51,
+				"w": 82,
+				"x": 60,
+				"y": 116
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_die_bl_35": {
+			"frame": {
+				"h": 50,
+				"w": 84,
+				"x": 536,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 50,
+				"w": 84,
+				"x": 59,
+				"y": 117
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_00": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 450,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_01": {
+			"frame": {
+				"h": 80,
+				"w": 54,
+				"x": 394,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 80,
+				"w": 54,
+				"x": 94,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_02": {
+			"frame": {
+				"h": 79,
+				"w": 58,
+				"x": 82,
+				"y": 477
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 58,
+				"x": 91,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_03": {
+			"frame": {
+				"h": 79,
+				"w": 60,
+				"x": 432,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 60,
+				"x": 90,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_04": {
+			"frame": {
+				"h": 78,
+				"w": 62,
+				"x": 248,
+				"y": 321
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 62,
+				"x": 89,
+				"y": 74
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_05": {
+			"frame": {
+				"h": 77,
+				"w": 64,
+				"x": 322,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 64,
+				"x": 88,
+				"y": 75
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_06": {
+			"frame": {
+				"h": 77,
+				"w": 66,
+				"x": 318,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 66,
+				"x": 87,
+				"y": 75
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_07": {
+			"frame": {
+				"h": 77,
+				"w": 66,
+				"x": 82,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 66,
+				"x": 86,
+				"y": 75
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_08": {
+			"frame": {
+				"h": 79,
+				"w": 66,
+				"x": 82,
+				"y": 242
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 66,
+				"x": 85,
+				"y": 74
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_09": {
+			"frame": {
+				"h": 79,
+				"w": 64,
+				"x": 0,
+				"y": 336
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 64,
+				"x": 85,
+				"y": 74
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_10": {
+			"frame": {
+				"h": 78,
+				"w": 64,
+				"x": 168,
+				"y": 313
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 64,
+				"x": 86,
+				"y": 74
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_11": {
+			"frame": {
+				"h": 71,
+				"w": 68,
+				"x": 322,
+				"y": 250
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 71,
+				"w": 68,
+				"x": 86,
+				"y": 75
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_12": {
+			"frame": {
+				"h": 66,
+				"w": 72,
+				"x": 168,
+				"y": 393
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 66,
+				"w": 72,
+				"x": 88,
+				"y": 76
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_13": {
+			"frame": {
+				"h": 66,
+				"w": 78,
+				"x": 168,
+				"y": 245
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 66,
+				"w": 78,
+				"x": 85,
+				"y": 77
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_14": {
+			"frame": {
+				"h": 66,
+				"w": 74,
+				"x": 386,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 66,
+				"w": 74,
+				"x": 88,
+				"y": 77
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_15": {
+			"frame": {
+				"h": 67,
+				"w": 70,
+				"x": 322,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 67,
+				"w": 70,
+				"x": 89,
+				"y": 76
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_16": {
+			"frame": {
+				"h": 68,
+				"w": 70,
+				"x": 0,
+				"y": 417
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 68,
+				"w": 70,
+				"x": 85,
+				"y": 76
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_17": {
+			"frame": {
+				"h": 74,
+				"w": 68,
+				"x": 248,
+				"y": 245
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 68,
+				"x": 83,
+				"y": 75
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_18": {
+			"frame": {
+				"h": 79,
+				"w": 66,
+				"x": 238,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 66,
+				"x": 82,
+				"y": 74
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_19": {
+			"frame": {
+				"h": 82,
+				"w": 62,
+				"x": 306,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 62,
+				"x": 85,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_20": {
+			"frame": {
+				"h": 82,
+				"w": 60,
+				"x": 370,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 60,
+				"x": 87,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_21": {
+			"frame": {
+				"h": 83,
+				"w": 56,
+				"x": 248,
+				"y": 401
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 56,
+				"x": 92,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_22": {
+			"frame": {
+				"h": 82,
+				"w": 54,
+				"x": 168,
+				"y": 461
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 54,
+				"x": 94,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_fire_bl_23": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 248,
+				"y": 486
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_00": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 82,
+				"y": 558
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_01": {
+			"frame": {
+				"h": 82,
+				"w": 50,
+				"x": 248,
+				"y": 569
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 50,
+				"x": 97,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_02": {
+			"frame": {
+				"h": 82,
+				"w": 50,
+				"x": 394,
+				"y": 488
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 50,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_03": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 394,
+				"y": 405
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_04": {
+			"frame": {
+				"h": 78,
+				"w": 58,
+				"x": 0,
+				"y": 487
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 58,
+				"x": 94,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_05": {
+			"frame": {
+				"h": 73,
+				"w": 66,
+				"x": 82,
+				"y": 402
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 73,
+				"w": 66,
+				"x": 91,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_06": {
+			"frame": {
+				"h": 72,
+				"w": 74,
+				"x": 242,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 74,
+				"x": 88,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_07": {
+			"frame": {
+				"h": 72,
+				"w": 76,
+				"x": 168,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 76,
+				"x": 89,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_08": {
+			"frame": {
+				"h": 72,
+				"w": 66,
+				"x": 388,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 66,
+				"x": 93,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_09": {
+			"frame": {
+				"h": 75,
+				"w": 52,
+				"x": 588,
+				"y": 405
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 52,
+				"x": 98,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_10": {
+			"frame": {
+				"h": 78,
+				"w": 42,
+				"x": 394,
+				"y": 882
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 42,
+				"x": 102,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_11": {
+			"frame": {
+				"h": 78,
+				"w": 40,
+				"x": 976,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 40,
+				"x": 103,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_12": {
+			"frame": {
+				"h": 79,
+				"w": 40,
+				"x": 530,
+				"y": 818
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 40,
+				"x": 103,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_13": {
+			"frame": {
+				"h": 79,
+				"w": 44,
+				"x": 626,
+				"y": 653
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 44,
+				"x": 101,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_14": {
+			"frame": {
+				"h": 79,
+				"w": 48,
+				"x": 530,
+				"y": 572
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 48,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_hit_bl_15": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 394,
+				"y": 405
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_00": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 0,
+				"y": 567
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_01": {
+			"frame": {
+				"h": 81,
+				"w": 50,
+				"x": 622,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 50,
+				"x": 98,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_02": {
+			"frame": {
+				"h": 82,
+				"w": 50,
+				"x": 136,
+				"y": 611
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 50,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_03": {
+			"frame": {
+				"h": 82,
+				"w": 48,
+				"x": 248,
+				"y": 653
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 48,
+				"x": 101,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_04": {
+			"frame": {
+				"h": 82,
+				"w": 48,
+				"x": 306,
+				"y": 628
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 82,
+				"w": 48,
+				"x": 101,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_05": {
+			"frame": {
+				"h": 83,
+				"w": 48,
+				"x": 504,
+				"y": 459
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 48,
+				"x": 102,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_06": {
+			"frame": {
+				"h": 83,
+				"w": 46,
+				"x": 642,
+				"y": 405
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 46,
+				"x": 104,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_07": {
+			"frame": {
+				"h": 83,
+				"w": 46,
+				"x": 394,
+				"y": 634
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 46,
+				"x": 105,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_08": {
+			"frame": {
+				"h": 83,
+				"w": 44,
+				"x": 588,
+				"y": 560
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 44,
+				"x": 107,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_09": {
+			"frame": {
+				"h": 83,
+				"w": 44,
+				"x": 394,
+				"y": 719
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 44,
+				"x": 107,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_10": {
+			"frame": {
+				"h": 84,
+				"w": 44,
+				"x": 136,
+				"y": 775
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 84,
+				"w": 44,
+				"x": 108,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_11": {
+			"frame": {
+				"h": 83,
+				"w": 44,
+				"x": 642,
+				"y": 490
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 44,
+				"x": 108,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_12": {
+			"frame": {
+				"h": 84,
+				"w": 42,
+				"x": 188,
+				"y": 853
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 84,
+				"w": 42,
+				"x": 110,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_13": {
+			"frame": {
+				"h": 84,
+				"w": 42,
+				"x": 82,
+				"y": 881
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 84,
+				"w": 42,
+				"x": 110,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_14": {
+			"frame": {
+				"h": 83,
+				"w": 42,
+				"x": 900,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 42,
+				"x": 110,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_idle_bl_15": {
+			"frame": {
+				"h": 83,
+				"w": 42,
+				"x": 530,
+				"y": 733
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 83,
+				"w": 42,
+				"x": 110,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_00": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 248,
+				"y": 486
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_01": {
+			"frame": {
+				"h": 80,
+				"w": 50,
+				"x": 588,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 80,
+				"w": 50,
+				"x": 97,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_02": {
+			"frame": {
+				"h": 79,
+				"w": 48,
+				"x": 248,
+				"y": 737
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 48,
+				"x": 98,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_03": {
+			"frame": {
+				"h": 76,
+				"w": 46,
+				"x": 692,
+				"y": 575
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 46,
+				"x": 99,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_04": {
+			"frame": {
+				"h": 75,
+				"w": 46,
+				"x": 790,
+				"y": 485
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 46,
+				"x": 99,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_05": {
+			"frame": {
+				"h": 74,
+				"w": 46,
+				"x": 574,
+				"y": 733
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 46,
+				"x": 99,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_06": {
+			"frame": {
+				"h": 72,
+				"w": 46,
+				"x": 672,
+				"y": 653
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 46,
+				"x": 99,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_07": {
+			"frame": {
+				"h": 72,
+				"w": 44,
+				"x": 956,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 44,
+				"x": 100,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_08": {
+			"frame": {
+				"h": 71,
+				"w": 44,
+				"x": 918,
+				"y": 330
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 71,
+				"w": 44,
+				"x": 100,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_09": {
+			"frame": {
+				"h": 70,
+				"w": 44,
+				"x": 672,
+				"y": 727
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 70,
+				"w": 44,
+				"x": 100,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_10": {
+			"frame": {
+				"h": 70,
+				"w": 44,
+				"x": 574,
+				"y": 809
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 70,
+				"w": 44,
+				"x": 100,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_11": {
+			"frame": {
+				"h": 70,
+				"w": 44,
+				"x": 306,
+				"y": 943
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 70,
+				"w": 44,
+				"x": 100,
+				"y": 73
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_12": {
+			"frame": {
+				"h": 72,
+				"w": 44,
+				"x": 720,
+				"y": 653
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 44,
+				"x": 100,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_13": {
+			"frame": {
+				"h": 73,
+				"w": 44,
+				"x": 788,
+				"y": 563
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 73,
+				"w": 44,
+				"x": 99,
+				"y": 72
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_14": {
+			"frame": {
+				"h": 74,
+				"w": 44,
+				"x": 838,
+				"y": 485
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 44,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_15": {
+			"frame": {
+				"h": 75,
+				"w": 44,
+				"x": 874,
+				"y": 408
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 75,
+				"w": 44,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_16": {
+			"frame": {
+				"h": 76,
+				"w": 44,
+				"x": 872,
+				"y": 330
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 44,
+				"x": 100,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_17": {
+			"frame": {
+				"h": 76,
+				"w": 46,
+				"x": 394,
+				"y": 804
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 46,
+				"x": 99,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_18": {
+			"frame": {
+				"h": 76,
+				"w": 46,
+				"x": 824,
+				"y": 330
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 46,
+				"x": 99,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_19": {
+			"frame": {
+				"h": 76,
+				"w": 50,
+				"x": 442,
+				"y": 634
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 50,
+				"x": 100,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_20": {
+			"frame": {
+				"h": 77,
+				"w": 52,
+				"x": 446,
+				"y": 488
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 52,
+				"x": 100,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_21": {
+			"frame": {
+				"h": 78,
+				"w": 50,
+				"x": 0,
+				"y": 713
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 50,
+				"x": 100,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_22": {
+			"frame": {
+				"h": 78,
+				"w": 46,
+				"x": 742,
+				"y": 405
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 46,
+				"x": 100,
+				"y": 68
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_23": {
+			"frame": {
+				"h": 77,
+				"w": 48,
+				"x": 82,
+				"y": 802
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 48,
+				"x": 100,
+				"y": 68
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_24": {
+			"frame": {
+				"h": 74,
+				"w": 50,
+				"x": 188,
+				"y": 777
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 50,
+				"x": 100,
+				"y": 69
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_25": {
+			"frame": {
+				"h": 73,
+				"w": 52,
+				"x": 778,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 73,
+				"w": 52,
+				"x": 100,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_26": {
+			"frame": {
+				"h": 73,
+				"w": 52,
+				"x": 708,
+				"y": 323
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 73,
+				"w": 52,
+				"x": 99,
+				"y": 70
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_27": {
+			"frame": {
+				"h": 72,
+				"w": 50,
+				"x": 442,
+				"y": 712
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 50,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_28": {
+			"frame": {
+				"h": 72,
+				"w": 48,
+				"x": 306,
+				"y": 869
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 48,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_29": {
+			"frame": {
+				"h": 72,
+				"w": 46,
+				"x": 136,
+				"y": 937
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 46,
+				"x": 100,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_30": {
+			"frame": {
+				"h": 72,
+				"w": 46,
+				"x": 188,
+				"y": 939
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 46,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_31": {
+			"frame": {
+				"h": 72,
+				"w": 46,
+				"x": 924,
+				"y": 254
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 46,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_32": {
+			"frame": {
+				"h": 72,
+				"w": 46,
+				"x": 944,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 46,
+				"x": 99,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_33": {
+			"frame": {
+				"h": 72,
+				"w": 48,
+				"x": 824,
+				"y": 408
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 48,
+				"x": 97,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_34": {
+			"frame": {
+				"h": 72,
+				"w": 48,
+				"x": 874,
+				"y": 254
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 72,
+				"w": 48,
+				"x": 97,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_35": {
+			"frame": {
+				"h": 73,
+				"w": 48,
+				"x": 858,
+				"y": 171
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 73,
+				"w": 48,
+				"x": 97,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_36": {
+			"frame": {
+				"h": 74,
+				"w": 50,
+				"x": 690,
+				"y": 405
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 74,
+				"w": 50,
+				"x": 95,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_37": {
+			"frame": {
+				"h": 76,
+				"w": 50,
+				"x": 588,
+				"y": 482
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 76,
+				"w": 50,
+				"x": 95,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_38": {
+			"frame": {
+				"h": 77,
+				"w": 52,
+				"x": 82,
+				"y": 641
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 77,
+				"w": 52,
+				"x": 94,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_39": {
+			"frame": {
+				"h": 78,
+				"w": 50,
+				"x": 136,
+				"y": 695
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 50,
+				"x": 95,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_40": {
+			"frame": {
+				"h": 78,
+				"w": 52,
+				"x": 306,
+				"y": 548
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 78,
+				"w": 52,
+				"x": 93,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_41": {
+			"frame": {
+				"h": 79,
+				"w": 52,
+				"x": 450,
+				"y": 406
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 79,
+				"w": 52,
+				"x": 93,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_42": {
+			"frame": {
+				"h": 80,
+				"w": 50,
+				"x": 662,
+				"y": 85
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 80,
+				"w": 50,
+				"x": 95,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_43": {
+			"frame": {
+				"h": 80,
+				"w": 52,
+				"x": 604,
+				"y": 0
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 80,
+				"w": 52,
+				"x": 94,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_44": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 306,
+				"y": 465
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 95,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		},
+		"bl/cosmo_artillery_reload_bl_45": {
+			"frame": {
+				"h": 81,
+				"w": 52,
+				"x": 248,
+				"y": 486
+			},
+			"rotated": false,
+			"spriteSourceSize": {
+				"h": 81,
+				"w": 52,
+				"x": 96,
+				"y": 71
+			},
+			"sourceSize": {
+				"h": 260,
+				"w": 260
+			},
+			"trimmed": true
+		}
+	},
+	"meta": {
+		"image": "cosmo_artillery.png"
+	}
+}
