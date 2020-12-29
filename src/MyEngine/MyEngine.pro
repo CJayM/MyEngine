@@ -22,6 +22,9 @@ shaders.path = $$DESTDIR/resources/shaders/
 images.files = $$files(resources/images/*)
 images.path = $$DESTDIR/resources/images/
 
+spritesheets.files = $$files(resources/spritesheets/*)
+spritesheets.path = $$DESTDIR/resources/spritesheets/
+
 reses.files = $$files(resources/*.png)
 reses.path = $$DESTDIR/resources/
 
@@ -29,7 +32,7 @@ deps.files = $$files(deps/*)
 deps.path = $$DESTDIR/
 
 COPIES += deps
-COPIES += reses shaders images
+COPIES += reses shaders images spritesheets
 
 INCLUDEPATH += ../../libs/glfw/include
 LIBS += -L"../../libs/glfw/lib-mingw-w64" -lglfw3 -lgdi32 -lopengl32
@@ -49,6 +52,7 @@ SOURCES +=  main.cpp \
     core/matrices.cpp \
     core/mesh.cpp \
     core/models/plane.cpp \
+    core/models/sprite_sheet.cpp \
     core/scene.cpp \
     core/shader.cpp \
     core/texture.cpp \
@@ -65,6 +69,7 @@ HEADERS += \
     core/matrices.h \
     core/mesh.h \
     core/models/plane.h \
+    core/models/sprite_sheet.h \
     core/scene.h \
     core/shader.h \
     core/texture.h \
